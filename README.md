@@ -1,5 +1,7 @@
 # HTML-harjoitustyo
 
+Tämä on HTML-harjoitustyö, jonka aiheena on origami. Sivusto sisältää tietoa origamista, sen historiasta ja eri tyyleistä sekä oppimateriaaleja ja tietoa tarvittavista välineistä ja materiaaleista. Projektissa on käytetty semanttisia HTML-elementtejä ja huomioitu saavutettavuus.
+
 ## Verkkosivuston tehtävän vastaukset
 
 1. **Mikä on verkkosivustosi aihe?**
