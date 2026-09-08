@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+}
+
+.piirustusalue {
+    height: 70%;
+    margin: 10px 0;
+}
+
+.tyokalupalkki,
+#piirustustaulu {
+    width: 100%;
+}
+
+.tyokalupalkki {
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+    border-bottom: 0;
+    padding: 8px;
+    gap: 8px;
+}
+
+.tyokalu-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.varinvalitsin {
+    margin: 0;
+    border: none;
+    color: blue;
+}
+
+.varinvalitsin::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.varinvalitsin::-webkit-color-swatch {
+    border: none;
+}
+
+.varinvalitsin::-moz-color-swatch {
+    border: none;
+}
+
+canvas {
+    display: block;
+    border: 2px solid grey;
+}

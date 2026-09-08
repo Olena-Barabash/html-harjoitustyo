@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Tämä on projektini, Piirustustaulu, joka on toteutettu Canvasilla" />
+        <link rel="stylesheet" href="css/tyyli.css" />
+        <title>Canvas Projekti 1: Piirto-ohjelma</title>
+        <script src="js/piirustus.js" defer></script>
+    </head>
+    <body>
+        <h1>Canvas Projekti 1: Piirto-ohjelma</h1>
+
+        <p>Tämä on projektini, <strong>Piirustustaulu</strong>, joka on toteutettu Canvasilla</p>
+
+        <p
+            >Aloita piirtäminen pitämällä hiiren vasenta painiketta painettuna alla olevalla piirtoalueella ja
+            liikuttamalla hiirtä.</p
+        >
+
+        <p>Voit myös vaihtaa väriä.</p>
+
+        <div class="piirustusalue">
+            <div class="tyokalupalkki" role="toolbar" aria-label="Piirtotyökalut">
+                <input
+                    type="color"
+                    value="#0000ff"
+                    id="btn-vari"
+                    class="tyokalu-btn varinvalitsin"
+                    aria-label="Valitse piirustusväri" />
+
+                <button type="button" id="btn-tyhjenna" class="tyokalu-btn" aria-label="Tyhjennä piirtoalusta">
+                    🗑️
+                </button>
+            </div>
+            <canvas
+                id="piirustustaulu"
+                role="img"
+                aria-label="Piirtoalue: piirrä hiirellä pitämällä vasenta painiketta painettuna"></canvas>
+        </div>
+    </body>
+</html>
