@@ -1,0 +1,21 @@
+#hymy {
+    visibility: hidden;
+}
+
+#kasvo:hover #hymy {
+    visibility: visible;
+}
+
+#kasvo:hover #suu {
+    visibility: hidden;
+}
+
+#tytto {
+    width: 600px;
+}
+
+#vaihda-vari {
+    display: block;
+    margin: 5px auto;
+    font-size: larger;
+}

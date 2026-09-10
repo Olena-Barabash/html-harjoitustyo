@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SVG harjoittelu - Tyttö</title>
+        <link rel="stylesheet" href="css/tyyli.css" />
+    </head>
+    <body>
+        <section id="tytto">
+            <svg width="600" height="600" viewBox="0 0 600 820">
+                <title>SVG-tyttö</title>
+                <desc>SVG harjoittelu - Tyttö</desc>
+                <g fill="pink" stroke="#9C5C5C" stroke-width="4" opacity="0.6">
+                    <g id="kasvo" fill="pink" stroke="#9C5C5C" stroke-width="4" opacity="0.6">
+                        <ellipse cx="300" cy="100" rx="110" ry="80" />
+                        <g fill="blue" stroke="darkblue">
+                            <circle cx="260" cy="80" r="10" />
+                            <circle cx="340" cy="80" r="10" />
+                        </g>
+                        <circle cx="300" cy="110" r="5" fill="#9C5C5C" />
+                        <g fill="red" stroke="red" stroke-width="3">
+                            <line id="suu" x1="280" y1="140" x2="320" y2="140" />
+                            <path id="hymy" d="M 280 135 A 25 20 0 0 0 320 135" />
+                        </g>
+                    </g>
+
+                    <line x1="300" y1="180" x2="300" y2="200" />
+                    <line x1="300" y1="200" x2="110" y2="350" />
+                    <line x1="300" y1="200" x2="490" y2="350" />
+
+                    <line x1="250" y1="500" x2="200" y2="750" />
+                    <line x1="200" y1="750" x2="160" y2="750" />
+                    <line x1="350" y1="500" x2="400" y2="750" />
+                    <line x1="400" y1="750" x2="440" y2="750" />
+                </g>
+                <polygon
+                    id="mekko"
+                    points="300,200 100,500 500,500"
+                    fill="yellow"
+                    stroke="orange"
+                    stroke-width="4"></polygon>
+
+                <text x="30" y="800" font-size="30" fill="purple">
+                    Tyttö (kokeile viedä hiiri hänen kasvojensa päälle).
+                </text>
+            </svg>
+
+            <br />
+
+            <button id="vaihda-vari">Vaihda mekon väriä</button>
+        </section>
+
+        <script src="js/tytto.js"></script>
+    </body>
+</html>
