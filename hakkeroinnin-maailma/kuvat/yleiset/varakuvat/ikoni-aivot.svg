@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <filter id="brain-glow" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.45" result="blur"/>
+      <feFlood flood-color="#00E5A8" flood-opacity="0.18"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g stroke="#4DE1B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#brain-glow)">
+    <path d="M16 7C14 2.5 7.5 3.5 7.5 8C3.5 8 2 12 4 15C.8 18 3 23 6.5 23C6 28 12.5 30 16 26C19.5 30 26 28 25.5 23C29 23 31.2 18 28 15C30 12 28.5 8 24.5 8C24.5 3.5 18 2.5 16 7Z"/><path d="M16 7V10M16 23V26M8 12Q11 11 11 8M5 18Q9 18 9 21M12 25Q11 22 14 20M24 12Q21 11 21 8M26 18Q23 17 22 20M17 14Q20 13 20 16M12 14L10.5 16"/>
+  </g>
+</svg>

@@ -1,17 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none" preserveAspectRatio="xMidYMid meet">
-  <defs>
-    <filter id="piiri-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur" />
-      <feFlood flood-color="#00E5A8" flood-opacity="0.18" />
-      <feComposite in2="blur" operator="in" />
-      <feMerge>
-        <feMergeNode />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-  </defs>
   <g transform="translate(-40.713789 -21.311703) scale(2.410197)">
-    <g stroke="#4DE1B7" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#piiri-glow)">
+    <g stroke="#00F5D4" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M75 32V61L95 81V95L87 103H76" />
       <path d="M98 43V54L109 66V89L97 101" />
       <path d="M57 61H67L82 76" />

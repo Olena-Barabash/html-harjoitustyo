@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <filter id="lightbulb-glow" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.45" result="blur"/>
+      <feFlood flood-color="#00E5A8" flood-opacity="0.18"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g stroke="#4DE1B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#lightbulb-glow)">
+    <path d="M11.5 23C11.5 18.8 7.5 18 7.5 12A8.5 8.5 0 0 1 24.5 12C24.5 18 20.5 18.8 20.5 23Z"/><path d="M12 26H20M13.5 29H18.5"/>
+  </g>
+</svg>

@@ -23,7 +23,7 @@
     <header>
         <nav aria-label="Päänavigointi">
             <a href="../index.html">
-                <img src="kuvat/yleiset/logo-piiri.svg" alt="Hakkeroinnin maailma -logo">
+                <img src="../kuvat/yleiset/logo-piiri.svg" alt="Hakkeroinnin maailma -logo">
                 <p>
                     <span>Hakkeroinnin maailma</span>
                     <span>Teknologia. Ihmiset. Maailma.</span>
@@ -41,26 +41,338 @@
         </nav>
     </header>
     <main>
-        <h1>Hakkerit ja hakkeroinnin tyypit</h1>
+        <section class="hero">
+            <h1>Hakkerit ja hakkeroinnin tyypit</h1>
+
+            <p class="hero-alaotsikko">Eri tavoitteita, erilaisia rooleja &ndash; samankaltaisia taitoja.</p>
+            <p>
+                Hakkerointi ei tarkoita aina rikollista toimintaa. Samankaltaista teknistä osaamista voidaan käyttää
+                sekä järjestelmien
+                suojaamiseen että niiden luvattomaan murtamiseen. Hakkeroinnin tarkoitus, lupa ja toimintaympäristö
+                ratkaisevat,
+                millaisesta toiminnasta on kyse.
+            </p>
+            <p>
+                Tällä sivulla tutustutaan erilaisiin hakkerityyppeihin, niiden tavoitteisiin sekä siihen, miten
+                hakkerointitaitoja
+                käytetään laillisesti kyberturvallisuuden parantamiseen.
+            </p>
+
+            <a href="#hakkerityypit">
+                Tutustu hakkerityyppeihin
+                <img src="../kuvat/yleiset/nuoli-alas.svg" alt="Nuoli alas">
+            </a>
+            <img src="../kuvat/tyypit/hakkeri-hero.png"
+                alt="Huppariin pukeutunut henkilö työskentelee useiden tietokonenäyttöjen ääressä">
+        </section>
+        <section id="hakkerityypit">
+            <h2>Hakkerityypit</h2>
+            <p>
+                Hakkereita luokitellaan usein heidän tavoitteidensa, toimintatapojensa ja toimintansa luvallisuuden
+                perusteella. White
+                hat-, black hat- ja grey hat -jaottelu on tunnettu tapa kuvata eroja, mutta todellisuudessa hakkeroinnin
+                motiivit ja
+                roolit voivat olla tätä monimuotoisempia.
+            </p>
+            <table>
+                <caption>Hakkerityyppien tavoitteita ja toimintaa</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tyyppi</th>
+                        <th scope="col">Tavoite</th>
+                        <th scope="col">Lupa</th>
+                        <th scope="col">Tyypillinen toiminta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>White hat</strong></th>
+                        <td>Turvallisuuden parantaminen</td>
+                        <td>Kyllä</td>
+                        <td>
+                            Haavoittuvuuksien etsiminen, tietoturvatestaus ja löydösten raportointi
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><strong>Black hat</strong></th>
+                        <td>Oma hyöty, vahingoittaminen tai luvaton pääsy</td>
+                        <td>Ei</td>
+                        <td>
+                            Järjestelmiin tunkeutuminen ja haavoittuvuuksien hyödyntäminen ilman lupaa
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><strong>Grey hat</strong></th>
+                        <td>Vaihtelee</td>
+                        <td>Ei aina</td>
+                        <td>
+                            Haavoittuvuuksien tutkiminen myös ilman etukäteen saatua lupaa, mutta ilman välttämättä
+                            rikollista hyötymistarkoitusta
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><strong>Hacktivisti</strong></th>
+                        <td>Poliittinen tai yhteiskunnallinen vaikuttaminen</td>
+                        <td>Vaihtelee</td>
+                        <td>
+                            Digitaalisten keinojen käyttäminen jonkin asian tai tavoitteen edistämiseen
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Eettinen hakkerointi</h2>
+            <p>
+                <strong>
+                    Eettisessä hakkeroinnissa teknisiä järjestelmiä tutkitaan luvallisesti niiden turvallisuuden
+                    parantamiseksi.
+                </strong>
+                Tavoitteena on löytää heikkouksia ennen kuin niitä voidaan käyttää vahingollisesti.
+            </p>
+            <p>
+                Eettisiä hakkereita työskentelee esimerkiksi kyberturvallisuusyrityksissä, organisaatioiden omissa
+                tietoturvatiimeissä sekä itsenäisinä tietoturvatutkijoina. Olennaista on, että tutkimukselle on lupa ja
+                että testaaminen tapahtuu sovittujen sääntöjen ja rajojen mukaisesti.
+            </p>
+            <article>
+                <img src="../kuvat/yleiset/ikoni-kilpi.svg" alt="Kilpi kuvaa penetraatiotestausta">
+                <h3>Penetraatiotestaus</h3>
+                <p>
+                    Penetraatiotestauksessa eli penetration testingissä järjestelmän turvallisuutta testataan
+                    jäljittelemällä todellisia
+                    hyökkäystilanteita sovituissa rajoissa. Tarkoituksena on löytää haavoittuvuuksia ja arvioida, miten
+                    niitä voitaisiin
+                    hyödyntää todellisessa hyökkäyksessä.
+                </p>
+                <a href="https://csrc.nist.gov/glossary/term/penetration_testing" target="_blank"
+                    rel="noopener noreferrer">
+                    Lue lisää
+                    <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                </a>
+            </article>
+            <article>
+                <img src="../kuvat/yleiset/ikoni-haku.svg" alt="Suurennuslasi kuvaa haavoittuvuuksien arviointia">
+                <h3>Haavoittuvuuksien arviointi</h3>
+                <p>
+                    Haavoittuvuuksien arvioinnissa etsitään ja arvioidaan järjestelmän mahdollisia
+                    turvallisuusheikkouksia. Sen painopiste
+                    on haavoittuvuuksien tunnistamisessa ja niiden merkityksen arvioinnissa.
+                </p>
+                <a href="https://csrc.nist.gov/pubs/sp/800/115/final" target="_blank" rel="noopener noreferrer">
+                    Lue lisää
+                    <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                </a>
+            </article>
+            <article>
+                <img src="../kuvat/yleiset/ikoni-ihmiset.svg" alt="Ihmisryhmä kuvaa red team -toimintaa">
+                <h3>Red teaming</h3>
+                <p>
+                    Red team -harjoituksissa turvallisuutta tarkastellaan hyökkääjän näkökulmasta. Tarkoituksena on
+                    testata teknisten
+                    suojausten lisäksi myös sitä, miten organisaatio havaitsee hyökkäyksiä ja reagoi niihin.
+                </p>
+                <a href="https://www.2ns.fi/mita-on-red-teaming-tietoturvatestaus/" target="_blank"
+                    rel="noopener noreferrer">
+                    Lue lisää
+                    <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                </a>
+            </article>
+            <article>
+                <img src="../kuvat/yleiset/ikoni-koodi.svg" alt="Koodisymboli kuvaa tietoturvatutkimusta">
+                <h3>Tietoturvatutkimus</h3>
+                <p>
+                    Tietoturvatutkijat tutkivat ohjelmistoja, laitteita ja järjestelmiä löytääkseen uusia
+                    haavoittuvuuksia ja ymmärtääkseen
+                    niiden vaikutuksia. Löydöksiä voidaan ilmoittaa valmistajille koordinoidun haavoittuvuuksien
+                    ilmoittamisen kautta.
+                </p>
+                <a href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer">
+                    Lue lisää
+                    <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                </a>
+            </article>
+        </section>
+        <section>
+            <img src="../kuvat/yleiset/ikoni-leikepoyta-koodi.svg"
+                alt="Lukolla varustettu työkalupakki kuvaa bug bounty -ohjelmia">
+            <h2>
+                Bug bounty &dash; haavoittuvuuksista voidaan maksaa palkkioita
+            </h2>
+            <p>
+                Monet yritykset ja muut organisaatiot kutsuvat ulkopuolisia tietoturvatutkijoita etsimään tuotteistaan
+                ja palveluistaan
+                haavoittuvuuksia. Tätä varten voidaan <strong>järjestää bug bounty- eli
+                    haavoittuvuuspalkkio-ohjelmia.</strong>
+            </p>
+            <p>
+                Ohjelmassa organisaatio määrittelee, mitä järjestelmiä saa tutkia ja millaisia sääntöjä tutkijan on
+                noudatettava. Kun
+                tutkija löytää ohjelman piiriin kuuluvan haavoittuvuuden ja ilmoittaa siitä vastuullisesti, hän voi
+                saada löydöksestään
+                rahallisen palkkion. Palkkion suuruuteen vaikuttavat yleensä esimerkiksi haavoittuvuuden vakavuus ja
+                vaikutukset.
+            </p>
+            <section>
+                <h3>Esimerkkejä bug bounty -ohjelmista</h3>
+                <ul>
+                    <li>
+                        <article>
+                            <img src="../kuvat/tyypit/google-g.png" width="80" alt="Google">
+                            <h4>Google Bug Hunters</h4>
+                            <p>
+                                Googlella on useita Vulnerability Reward Programmeja, joiden kautta ulkopuoliset
+                                tietoturvatutkijat voivat ilmoittaa
+                                Google-tuotteista löytämistään haavoittuvuuksista ja saada hyväksytyistä löydöksistä
+                                palkkioita.
+                            </p>
+                            <!-- <p>
+                                            Googlen Vulnerability Reward Programme
+                                        </p> -->
+                            <a href="https://bughunters.google.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <!-- <img src="../kuvat/tyypit/h1-merkki-valkoinen.png" width="25" alt=""> -->
+                            <img src="../kuvat/tyypit/h1-merkki-musta.png" width="25" alt="HackerOne">
+                            <h4>HackerOne</h4>
+                            <p>
+                                HackerOne on alusta, jonka kautta monet organisaatiot järjestävät bug bounty -ohjelmia
+                                ja
+                                tekevät yhteistyötä
+                                tietoturvatutkijoiden kanssa.
+                            </p>
+                            <!-- <p>
+                        Monien organisaatioiden bug bounty -ohjelmat
+                    </p> -->
+                            <a href="https://www.hackerone.com/bug-bounty-programs" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <img src="../kuvat/yleiset/ikoni-hehkulamppu.svg" alt="">
+                <h3>Tiesitkö?</h3>
+                <p>
+                    Bug bounty ei tarkoita lupaa testata mitä tahansa yrityksen järjestelmää. Jokaisella ohjelmalla on
+                    oma <strong>scope</strong>, joka
+                    määrittelee, mitä saa testata ja millä ehdoilla.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Miksi ihmiset hakkeroivat?</h2>
+            <p>
+                Hakkeroinnin taustalla voi olla hyvin erilaisia motiiveja. Jotkut haluavat ymmärtää, miten teknologia
+                toimii, ratkaista
+                vaikeita ongelmia tai parantaa järjestelmien turvallisuutta. Toisia voivat motivoida raha, poliittiset
+                tai
+                yhteiskunnalliset tavoitteet, maine tai halu aiheuttaa vahinkoa.
+            </p>
+            <p>
+                Sama henkilö voi myös toimia eri tilanteissa erilaisissa rooleissa. Siksi hakkereita ei aina voida
+                sijoittaa
+                yksiselitteisesti yhteen ryhmään pelkästään teknisten taitojen perusteella.
+            </p>
+            <ul>
+                <li>
+                    <img src="../kuvat/yleiset/ikoni-aivot.svg" alt="Aivot kuvaavat uteliaisuutta ja oppimista">
+                    <h3>Uteliaisuus ja oppiminen</h3>
+                    <p>Halu ymmärtää järjestelmiä ja ratkaista teknisiä ongelmia.</p>
+                </li>
+                <li>
+                    <img src="../kuvat/yleiset/ikoni-asetukset.svg" alt="Hammasratas kuvaa turvallisuuden parantamista">
+                    <h3>Turvallisuuden parantaminen</h3>
+                    <p>Haavoittuvuuksien löytäminen ja järjestelmien suojaaminen.</p>
+                </li>
+                <li>
+                    <img src="../kuvat/yleiset/ikoni-euro.svg" alt="Eurosymbolilla varustettu kolikko">
+                    <h3>Taloudellinen hyöty</h3>
+                    <p>
+                        Lailliset palkkiot tai toisaalta rikollinen taloudellisen hyödyn tavoittelu.
+                    </p>
+                </li>
+                <li>
+                    <img src="../kuvat/yleiset/ikoni-ihmiset.svg"
+                        alt="Ihmisryhmä kuvaa yhteiskunnallista vaikuttamista">
+                    <h3>Yhteiskunnallinen vaikuttaminen</h3>
+                    <p>Teknologian käyttäminen poliittisten tai yhteiskunnallisten tavoitteiden edistämiseen.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Missä kulkee raja?</h2>
+            <p>
+                Hakkeroinnissa tekniset taidot eivät yksin ratkaise, onko toiminta hyväksyttävää tai laillista.
+                Keskeisiä kysymyksiä
+                ovat <strong>lupa, tarkoitus ja sovitut rajat.</strong>
+            </p>
+            <p>
+                Esimerkiksi penetraatiotestaaja voi käyttää samoja menetelmiä kuin todellinen hyökkääjä, mutta tekee sen
+                organisaation
+                luvalla ja ennalta määritellyssä ympäristössä. Bug bounty -tutkijan on puolestaan noudatettava kyseisen
+                ohjelman
+                sääntöjä ja scopea.
+            </p>
+            <p>
+                Teknisen toiminnan asiayhteys voi siis muuttaa ratkaisevasti sitä, mistä toiminnassa on kyse.
+            </p>
+        </section>
+        <section>
+            <h2>Haluatko tietää lisää?</h2>
+            <p>
+                Hakkeroinnin roolit ja motiivit ovat vain yksi osa ilmiötä. Seuraavaksi voit tutustua siihen, miten
+                hakkerointi on
+                kehittynyt vuosikymmenten aikana, millaiset tosielämän tapaukset ovat jättäneet jälkensä historiaan ja
+                miten hakkereita
+                kuvataan populaarikulttuurissa.
+            </p>
+            <ul>
+                <li>
+                    <a href="historia.html">
+                        Historiaan
+                        <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                    </a>
+                </li>
+                <li>
+                    <a href="tosielaman-hakkerit.html">
+                        Tosielämän tapauksiin
+                        <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                    </a>
+                </li>
+                <li>
+                    <a href="hakkerit-elokuvissa.html">
+                        Elokuviin ja televisioon
+                        <img src="../kuvat/yleiset/nuoli-oikealle.svg" alt="Nuoli oikealle">
+                    </a>
+                </li>
+            </ul>
+        </section>
 
     </main>
     <footer>
         <nav aria-label="Alatunnisteen navigointi">
             <a href="../index.html">
-                <img src="kuvat/yleiset/logo-piiri.svg" alt="Hakkeroinnin maailma -logo">
+                <img src="../kuvat/yleiset/logo-piiri.svg" alt="Hakkeroinnin maailma -logo">
                 <span>Hakkeroinnin maailma</span>
             </a>
         </nav>
-        <img src="kuvat/yleiset/icon-sparkle.svg" alt="">
+        <img src="../kuvat/yleiset/ikoni-nelisakarainen-tahti.svg" alt="">
         <span>
             Kaikki sivuston sisältö on tuotettu tekoälyn avulla. Sivuston rakenne ja toteutus ovat tekijän omaa työtä.
         </span>
         <a href="https://github.com/Olena-Barabash/html-harjoitustyo/tree/main/hakkeroinnin-maailma" target="_blank"
             rel="noopener noreferrer">
-            <img src="kuvat/yleiset/footer-github.svg" alt="">
+            <img src="../kuvat/yleiset/ikoni-github.svg" alt="GitHub">
         </a>
         <a href="mailto:olena.barabash@edu.keuda.fi">
-            <img src="kuvat/yleiset/footer-email.svg" alt="">
+            <img src="../kuvat/yleiset/ikoni-sahkoposti.svg" alt="Sähköposti">
         </a>
         <hr>
         <p>&copy; 2025 Hakkeroinnin maailma. Kaikki oikeudet pidätetään.</p>

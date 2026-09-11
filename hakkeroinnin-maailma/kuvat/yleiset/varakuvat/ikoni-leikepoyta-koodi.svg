@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <filter id="clipboard-code-glow" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.45" result="blur"/>
+      <feFlood flood-color="#00E5A8" flood-opacity="0.18"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g stroke="#4DE1B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#clipboard-code-glow)">
+    <rect x="5" y="7" width="22" height="22" rx="2.5"/><path d="M11 7V5.5Q11 4 13 4H13.5A2.5 2.5 0 0 1 18.5 4H19Q21 4 21 5.5V7M10 11H23V25H9V11Z"/><path d="M14.5 15L11.5 18L14.5 21M17.5 15L20.5 18L17.5 21" stroke-width="1.6"/>
+  </g>
+</svg>
