@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="maapallo-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur" />
+      <feFlood flood-color="#00E5A8" flood-opacity="0.18" />
+      <feComposite in2="blur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <radialGradient id="orbit-light">
+      <stop stop-color="#B4FFE8" />
+      <stop offset="0.3" stop-color="#4DE1B7" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#00E5A8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <g transform="translate(-49.6 32) scale(1.6)">
+    <g stroke-linecap="round" stroke-linejoin="round" filter="url(#maapallo-glow)">
+      <g stroke="#00E5A8" stroke-width="4">
+        <circle cx="107" cy="60" r="44.5" />
+        <ellipse cx="107" cy="60" rx="24" ry="44.5" />
+        <path d="M107 15.5V104.5M63 60H151M73 32Q107 51 141 32M73 88Q107 72 141 88" />
+      </g>
+      <path d="M152 30C198 19 166 57 111 80C63 101 39 95 53 72" stroke="#4DE1B7" stroke-width="4" />
+    </g>
+    <circle cx="151" cy="59" r="9" fill="url(#orbit-light)" />
+    <path d="M145 59H157M151 53V65" stroke="#4DE1B7" stroke-width="1.1" stroke-linecap="round" opacity="0.7" />
+    <circle cx="151" cy="59" r="3" fill="#C5FFED" />
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" width="256" height="256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.1" result="blur" />
+      <feFlood flood-color="#00E5A8" flood-opacity="0.18" />
+      <feComposite in2="blur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(27.37037 4.740741) scale(0.962963)">
+    <g fill="none" stroke="#00E5A8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+      <path d="M62 50v34l28 24v40l-28 24v34" />
+      <path d="M112 42v44l26 22v40l-26 22v44" />
+      <path d="M162 56v36l24 20v32l-24 20v36" />
+      <path d="M62 84H40M62 172H40M112 86h-20M112 170h-20M162 92h-18M162 164h-18" />
+      <circle cx="62" cy="40" r="7" />
+      <circle cx="62" cy="216" r="7" />
+      <circle cx="112" cy="32" r="7" />
+      <circle cx="112" cy="224" r="7" />
+      <circle cx="162" cy="46" r="7" />
+      <circle cx="162" cy="210" r="7" />
+      <circle cx="30" cy="84" r="7" />
+      <circle cx="30" cy="172" r="7" />
+    </g>
+  </g>
+</svg>
