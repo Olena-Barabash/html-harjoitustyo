@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinnoittelusivu efekteillä</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+    <header class="site-header" id="top">
+        <a class="brand" href="index.html">CSS-projekti</a>
+        <nav aria-label="Päänavigaatio">
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Etusivu</a></li>
+                <li><a href="pages/tietoa.html">Tietoa</a></li>
+                <li><a href="#cards">Sisältö</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="hero">
+            <p class="eyebrow">CSS-kokonaisharjoitus 11</p>
+            <h1>Hinnoittelusivu efekteillä</h1>
+            <p class="hero__lead">Sivun rakenne, komponentit ja sisältö on tarkoitettu CSS-harjoitteluun.</p>
+            <a class="button button--primary" href="#cards">Tutustu sisältöön</a>
+            <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,30 C400,50 700,100 1000,45 C1200,10 1350,20 1440,25 L1440,100 L0,100 Z" />
+            </svg>
+        </section>
+        <section class="content-section" id="cards">
+            <h2>Ajankohtaiset sisällöt</h2>
+            <div class="card-list">
+                <article class="card">
+                    <span class="card__badge">01</span>
+                    <h3 class="card__title">Sisältökortti 1</h3>
+                    <p class="card__text">Kortin sisältö joustaa ja säilyy luettavana eri tilanteissa.</p>
+                    <a class="button" href="#">Lue lisää</a>
+                </article>
+                <article class="card card--featured">
+                    <span class="card__badge">02</span>
+                    <h3 class="card__title">Sisältökortti 2</h3>
+                    <p class="card__text">Kortin sisältö joustaa ja säilyy luettavana eri tilanteissa.</p>
+                    <a class="button" href="#">Lue lisää</a>
+                </article>
+                <article class="card">
+                    <span class="card__badge">03</span>
+                    <h3 class="card__title">Sisältökortti 3</h3>
+                    <p class="card__text">Kortin sisältö joustaa ja säilyy luettavana eri tilanteissa.</p>
+                    <a class="button" href="#">Lue lisää</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <button class="help-button" type="button" aria-label="Avaa ohje">?</button>
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path d="
+                M 0 58
+                C 120 46, 235 38, 350 40
+                C 540 43, 740 68, 950 67
+                C 1050 67, 1130 62, 1200 53
+                L 1200 0
+                L 0 0
+                Z
+            " />
+        </svg>
+        <p>CSS-kokonaisharjoitus · Osa 11</p>
+    </footer>
+</body>
+
+</html>

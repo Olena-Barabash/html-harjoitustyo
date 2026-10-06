@@ -1,0 +1,369 @@
+/* CSS-kokonaisharjoitus, osa 11 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+:root {
+    /* Värit */
+    --vari-tausta-ensisijainen: #2E9B5E;
+    --vari-tausta-toissijainen: #FFFFFF;
+    --vari-tausta-korostus: #1E5BB8;
+    --vari-tausta-sivu: #F4F7FB;
+    --vari-tausta-kortti: #FFFFFF;
+    --vari-teksti-ensisijainen: #47515f;
+    --vari-teksti-toissijainen: #FFFFFF;
+    --vari-teksti-taydentava: #2E9B5E;
+    --vari-teksti-korostus: #141c27;
+
+    /* Fonttikoot */
+    --fonttikoko-leipateksti: 1rem;
+    --fonttikoko-h1: clamp(2.5rem, 5vw, 5rem);
+    --fonttikoko-h2: clamp(1.5rem, 4vw, 2rem);
+    --fonttikoko-h3: clamp(1.125rem, 2.5vw, 1.25rem);
+    /* --fonttikoko-pieni */
+
+    /* Padding */
+    --padding-ensisijainen: 2% 7%;
+    --padding-painike: 1rem 2rem;
+    --padding-nav: 0 0 0 1rem;
+
+    /* Font-weght */
+    --fontin-paksuus-lihava: 700;
+    --fontin-paksuus-vahva: 600;
+    --fontin-paksuus-keskivahva: 500;
+    --fontin-paksuus-normaali: 400;
+
+    /* Border */
+    --border-width-thin: 0.05rem;
+    --border-width-thick: 0.15rem;
+    --border-radius-button: 1.7rem;
+    --border-radius-kortti: 0.8rem;
+    --border-radius-round: 50%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--vari-tausta-sivu);
+    font-family: "Inter", Arial, sans-serif;
+    margin: 0;
+
+    color: var(--vari-teksti-ensisijainen);
+
+    h2, h3, .brand {
+        color: var(--vari-teksti-korostus);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* a:visited {
+        color: inherit;
+    } */
+
+    .button {
+        display: inline-block;
+        margin: 1rem 0;
+        padding: var(--padding-painike);
+        border: var(--border-width-thin) solid var(--vari-tausta-toissijainen);
+        border-radius: var(--border-radius-button);
+    }
+
+    .button::after {
+        margin-left: 1rem;
+        content: "➔";
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.site-header {
+    display: flex;
+    padding: var(--padding-ensisijainen);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--vari-tausta-sivu);
+
+    li {
+        display: inline-block;
+        padding: var(--padding-nav);
+    }
+
+    a, a:visited {
+        color: var(--vari-teksti-korostus);
+    }
+
+    a[aria-current="page"] {
+        font-weight: var(--fontin-paksuus-lihava);
+        position: relative;
+    }
+
+    a[aria-current="page"]::after {
+        display: block;
+        width: 115%;
+        height: 0.2rem;
+        margin-top: 0.5rem;
+        background-color: var(--vari-teksti-taydentava);
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .brand {
+        font-size: var(--fonttikoko-h2);
+        font-weight: var(--fontin-paksuus-lihava);
+    }
+}
+
+.hero {
+    padding: var(--padding-ensisijainen);
+    background: linear-gradient(
+            to right,
+            rgba(2, 31, 62, 0.85) 0%,
+            rgba(3, 42, 73, 0.65) 35%,
+            rgba(4, 48, 75, 0.20) 75%,
+            rgba(4, 48, 75, 0.25) 100%
+        ),
+        linear-gradient(
+            rgba(5, 35, 55, 0.18),
+            rgba(5, 35, 55, 0.18)
+        ), url("../kuvat/hero-kuva.png")
+      center / cover no-repeat;
+
+    font-size: var(--fonttikoko-h3);
+    color: var(--vari-tausta-toissijainen);
+    position: relative;
+    padding-bottom: 3.5rem;
+
+    .eyebrow {
+        font-size: var(--fonttikoko-leipateksti);
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: var(--fonttikoko-h1);
+        font-weight: var(--fontin-paksuus-lihava);
+    }
+
+    .button--primary {
+        background-color: var(--vari-tausta-ensisijainen);
+        /* border: var(--border-width) solid var(--vari-tausta-toissijainen); */
+        /* border: 2px solid var(--vari-tausta-toissijainen); */
+        color: var(--vari-tausta-toissijainen);
+    }
+
+    .hero-wave {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4rem;
+    }
+
+    .hero-wave path {
+        fill: var(--vari-tausta-sivu);
+    }
+}
+
+.content-section {
+    padding: var(--padding-ensisijainen);
+    padding-top: 0;
+    /* display: grid; */
+
+
+    h2::before {
+        display: block;
+        width: 2rem;
+        height: 0.2rem;
+        margin-bottom: 1rem;
+        background-color: var(--vari-teksti-taydentava);
+        content: "";
+    }    
+
+    .card-list {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .card {
+        position: relative;
+        padding: 1rem;
+        background: var(--vari-tausta-kortti);
+        border-radius: var(--border-radius-kortti);
+
+        .card__badge {
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+
+            justify-content: center;
+            align-items: center;
+            
+            background-color: var(--vari-tausta-ensisijainen);
+
+            border: var(--border-width-thin) solid var(--vari-tausta-toissijainen);
+            border-radius: var(--border-radius-round);
+
+            font-weight: var(--fontin-paksuus-lihava);
+            color: var(--vari-teksti-toissijainen);
+        }
+
+        .button {
+            background-color: var(--vari-tausta-toissijainen);
+
+            border: var(--border-width-thick) solid var(--vari-tausta-ensisijainen);
+            border-radius: var(--border-radius-button);
+
+            font-weight: var(--fontin-paksuus-vahva);
+            color: var(--vari-teksti-taydentava);
+        }
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 5rem;    
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: var(--border-radius-kortti) var(--border-radius-kortti) 0 0;
+
+        z-index: 0;
+    }
+
+    .card:nth-child(1)::before {
+        background-image: url("../kuvat/kortti-1-kuva.png");
+    }
+
+    .card:nth-child(2)::before {
+        background-image: url("../kuvat/kortti-2-kuva.png");
+    }
+
+    .card:nth-child(3)::before {
+        background-image: url("../kuvat/kortti-3-kuva.png");
+    }
+
+    .card > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card--featured {
+        .card__badge {
+            background-color: var(--vari-tausta-korostus);
+        }
+
+        .button {
+            background-color: var(--vari-tausta-korostus);
+
+            border-color: var(--vari-tausta-korostus);
+           
+            color: var(--vari-teksti-toissijainen);
+        }
+    }
+
+    h3 {
+        margin-top: 2rem;
+    }
+
+    padding-bottom: 0;
+
+}
+
+.help-button {
+    display: flex;
+    /* position: absolute;
+    right: 7%;
+    bottom: 5%; */
+
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: auto;
+    margin-right: 7%;
+    transform: translateY(50%);
+
+    font-size: 1.5rem;
+
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--vari-tausta-ensisijainen);
+
+    border: var(--border-width-thick) solid var(--vari-tausta-toissijainen);
+    border-radius: var(--border-radius-round);
+
+    font-weight: var(--fontin-paksuus-lihava);
+    color: var(--vari-teksti-toissijainen);
+}
+
+footer {
+    height: 40%;
+    padding: var(--padding-ensisijainen);
+    padding-top: 3.5rem;
+    background:
+    linear-gradient(
+        rgba(2, 31, 62, 0.85),
+        rgba(2, 31, 62, 0.85)
+    ),
+    url("../kuvat/footer-kuva.png")
+      bottom / cover no-repeat;
+
+    font-size: var(--fonttikoko-h3);
+    color: var(--vari-tausta-toissijainen);
+    position: relative;
+    z-index: -1;
+    /* padding-bottom: 3.5rem; */
+
+    .footer-wave {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50%;
+    }
+
+    .footer-wave path {
+        fill: var(--vari-tausta-sivu);
+    }
+
+}
+
+/* .nav-list li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-list li {
+    display: inline-block;
+    text-decoration: none;
+} */
+
+
+@media (min-width: 768px) {
+    .skip-link:focus {
+        z-index: 100;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .skip-link:focus {
+        z-index: 100;
+    }
+}
