@@ -1,0 +1,184 @@
+:root {
+    --vari-korostus-primary: #2D8CFF;
+    --vari-korostus-secondary: #FFFFFF;
+    --vari-korostus-hover: #0d69d9;
+    --vari-kohdistus: #1358b2;
+
+    --kulmien-pyoristys: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    padding: 0 1.2rem;
+}
+
+#harjoitukset {
+    display: grid;
+    margin-top: 2rem;
+    gap: 1rem;    
+}
+
+.harjoitus {
+    padding: 0 1.2rem;
+    border: 2px solid #CBD5E1;
+    border-radius: var(--kulmien-pyoristys);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 0.7rem 0;
+    padding: 0.7rem 0;
+    border: 2px solid var(--vari-korostus-primary);
+    border-radius: var(--kulmien-pyoristys);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--vari-korostus-primary);
+    color: var(--vari-korostus-secondary);
+}
+
+.btn-primary:enabled:hover {
+    background-color: var(--vari-korostus-hover);
+}
+
+.btn-secondary {
+    background-color: var(--vari-korostus-secondary)var(--vari-korostus-primary);
+    color: var(--vari-korostus-primary);
+}
+
+.btn-secondary:enabled:hover {
+    background-color: #95d0ff40;
+}
+
+.btn:enabled:active {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:focus-visible {
+    outline: 3px solid #FFBF47;
+    outline-offset: 1px;
+}
+
+*:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+form {
+    display: grid;
+    gap: 0.3rem;
+}
+
+label {
+    margin-top: 0.51rem;
+}
+
+#kayttoehdot {
+    transform: scale(1.1);
+    margin: 1rem 0.5rem 0 0;
+}
+
+label:has(+input:required)::after, #kayttoehdot-container::after {
+    content: " *";
+    color: orangered;
+}
+
+input {
+    padding: 0.7rem;
+    border: 2px solid lightgray;
+    border-radius: var(--kulmien-pyoristys);
+}
+
+input:valid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12l5 5L20 7' fill='none' stroke='%2316A34A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+input:user-invalid {
+    border-color: #EF4444;
+    /* background-color: #FFF1F2; */
+}
+
+input:checked {
+    box-shadow: 0 0 0 3px #DCEBFF;
+}
+
+.varillinen-span {
+    display: inline-block;
+    padding: 0.3rem;
+    background-color: lightgreen;
+}
+
+.kortti {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid lightgray;
+    border-radius: var(--kulmien-pyoristys);
+    margin: 1rem 0;
+    padding: 1.1rem;
+}
+
+.kortti::before {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightcoral;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+    
+    
+    content: "";
+}
+
+.kortti:has(img) {
+    background-color: lightgreen;    
+}
+
+.kortti img {
+    border-radius: var(--kulmien-pyoristys);
+    transform-origin: center;
+}
+
+@keyframes pyorinta {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.kortti:has(> a:focus-visible) > img {
+    animation: pyorinta 1s ease-in-out;
+}
+
+/* article:has(a:focus-visible) > img {
+    transform: rotate(5deg);
+} */
+
+@media (min-width: 748px) {
+    #harjoitukset {
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+/* .kortti img {
+    transform-origin: center;
+    transition: transform 1s ease-in-out;
+}
+
+.kortti:has(> a:focus-visible) > img {
+    transform: rotateY(360deg);
+} */

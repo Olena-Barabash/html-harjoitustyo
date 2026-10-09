@@ -1,50 +1,45 @@
 <!doctype html>
 <html lang="fi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Tämä on projektini, Piirustustaulu, joka on toteutettu Canvasilla" />
-        <link rel="stylesheet" href="css/tyyli.css" />
-        <title>Canvas Projekti 1: Piirto-ohjelma</title>
-        <script src="js/piirustus.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <nav class="paanavigaatio">
-                <ul>
-                    <li><a href="../../index.html">Repositorion etusivu</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <h1>Canvas Projekti 1: Piirto-ohjelma</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tämä on projektini, Piirustustaulu, joka on toteutettu Canvasilla" />
+    <link rel="stylesheet" href="css/tyyli.css" />
+    <title>Canvas Projekti 1: Piirto-ohjelma</title>
+    <script src="js/piirustus.js" defer></script>
+</head>
 
-        <p>Tämä on projektini, <strong>Piirustustaulu</strong>, joka on toteutettu Canvasilla</p>
+<body>
+    <header>
+        <nav class="paanavigaatio">
+            <ul>
+                <li><a href="../../index.html">Muut miniprojektit</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <p
-            >Aloita piirtäminen pitämällä hiiren vasenta painiketta painettuna alla olevalla piirtoalueella ja
-            liikuttamalla hiirtä.</p
-        >
+    <h1>Canvas Projekti 1: Piirto-ohjelma</h1>
 
-        <p>Voit myös vaihtaa väriä.</p>
+    <p>Tämä on projektini, <strong>Piirustustaulu</strong>, joka on toteutettu Canvasilla</p>
 
-        <div class="piirustusalue">
-            <div class="tyokalupalkki" role="toolbar" aria-label="Piirtotyökalut">
-                <input
-                    type="color"
-                    value="#0000ff"
-                    id="btn-vari"
-                    class="tyokalu-btn varinvalitsin"
-                    aria-label="Valitse piirustusväri" />
+    <p>Aloita piirtäminen pitämällä hiiren vasenta painiketta painettuna alla olevalla piirtoalueella ja
+        liikuttamalla hiirtä.</p>
 
-                <button type="button" id="btn-tyhjenna" class="tyokalu-btn" aria-label="Tyhjennä piirtoalusta">
-                    🗑️
-                </button>
-            </div>
-            <canvas
-                id="piirustustaulu"
-                role="img"
-                aria-label="Piirtoalue: piirrä hiirellä pitämällä vasenta painiketta painettuna"></canvas>
+    <p>Voit myös vaihtaa väriä.</p>
+
+    <div class="piirustusalue">
+        <div class="tyokalupalkki" role="toolbar" aria-label="Piirtotyökalut">
+            <input type="color" value="#0000ff" id="btn-vari" class="tyokalu-btn varinvalitsin"
+                aria-label="Valitse piirustusväri" />
+
+            <button type="button" id="btn-tyhjenna" class="tyokalu-btn" aria-label="Tyhjennä piirtoalusta">
+                🗑️
+            </button>
         </div>
-    </body>
+        <canvas id="piirustustaulu" role="img"
+            aria-label="Piirtoalue: piirrä hiirellä pitämällä vasenta painiketta painettuna"></canvas>
+    </div>
+</body>
+
 </html>

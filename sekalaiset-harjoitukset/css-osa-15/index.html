@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjoitukset ja miniprojekti</title>
+    <link rel="stylesheet" href="css/tyyli.css">
+</head>
+
+<body>
+    <main>
+        <h1>Harjoitukset ja miniprojekti</h1>
+        <p>
+            <strong>Tehtävä:</strong> rakenna käyttöliittymä, jossa eri tilat ovat näkyviä, ymmärrettäviä ja
+            saavutettavia.
+        </p>
+
+        <section id="harjoitukset">
+            <article class="harjoitus">
+                <h2>Harjoitus 1</h2>
+                <h3>Painikejärjestelmä</h3>
+                <p>
+                    <strong>Tehtävä:</strong> tee primary- ja secondary-painikkeille hover, focus-visible, active ja
+                    disabled. Älä poista fokusta.
+                </p>
+
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-primary" disabled>Primary (disabled)</button>
+                <button class="btn btn-secondary" disabled>Secondary (disabled)</button>
+            </article>
+            <article class="harjoitus">
+                <h2>Harjoitus 2</h2>
+                <h3>Lomakekortti</h3>
+                <p>
+                    <strong>Tehtävä:</strong> tyylittele required, valid, invalid, checked ja disabled. Lisää selkeät
+                    tekstimuotoiset ohjeet.
+                </p>
+
+                <form method="post">
+                    <label for="nimi">Nimi</label>
+                    <input type="text" id="nimi" name="nimi" minlength="2" title="imessä on oltava vähintään 2 merkkiä"
+                        placeholder="Syötä nimesi" required>
+
+                    <label for="nimi">Sähköposti</label>
+                    <input type="email" id="posti" name="posti" placeholder="nimi@esimerkki.fi" required>
+
+                    <label for="nimi">Ikä</label>
+                    <input type="number" id="ika" name="ika" min="18" max="120"
+                        title="Käyttäjän on oltava vähintään 18-vuotias" placeholder=18" required>
+
+                    <span id="kayttoehdot-container">
+                        <input type="checkbox" id="kayttoehdot" name="kayttoehdot" required>
+                        <label for="kayttoehdot">Hyväksyn</label>
+                        <a href="#">käyttöehdot</a>
+                    </span>
+
+                    <button class="btn btn-primary" disabled>Lähetä</button>
+                </form>
+            </article>
+            <article class="harjoitus">
+                <h2>Haaste</h2>
+                <h3>Smart card</h3>
+                <p>
+                    <strong>Tehtävä:</strong> rakenna <span class="varillinen-span">.card:has(img)</span>,
+                    :has(a:focus-visible) ja ::before-koriste. Pidä
+                    sisältö semanttisessa HTML:ssä.
+                </p>
+
+                <article class="kortti">
+                    <img src="kuvat/kortti-1-kuva.png" width="100%" alt="">
+                    <h4>Esimerkkikortti kuvalla</h4>
+                    <p>Tämä on esimerkkiteksti kortille. Se sisältää kuvan, otsikon, lyhyen kuvauksen ja linkin.</p>
+                    <a href="#">Lue lisää</a>
+
+                </article>
+                <article class="kortti">
+                    <h4>Esimerkkikortti ilman kuvaa</h4>
+                    <p>Tämä on esimerkkiteksti kortille. Se sisältää otsikon, lyhyen kuvauksen ja linkin.</p>
+                    <a href="#">Lue lisää</a>
+                </article>
+            </article>
+        </section>
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>
