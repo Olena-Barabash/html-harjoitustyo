@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS, osa 16: Rekisteröidy</title>
+    <link rel="stylesheet" href="css/tyyli.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Rekisteröidy</h1>
+        <p>Täytä tiedot ja luo tili.</p>
+
+        <form method="POST">
+            <div class="container">
+                <label for="nimi">Nimi</label>
+                <input type="text" id="nimi" name="nimi" placeholder="Etunimi Sukunimi" required>
+
+                <label for="posti">Sähköposti</label>
+                <input type="email" id="posti" name="posti" placeholder="esimerkki@domain.fi" required>
+
+                <label for="salasana">Salasana</label>
+                <input type="password" id="salasana" name="salasana" minlength="8" placeholder="Vähintään 8 merkkiä"
+                    required>
+
+                <label for="vahvista-salasana">Vahvista salasana</label>
+                <input type="password" id="vahvista-salasana" name="vahvista-salasana" minlength="8"
+                    placeholder="Toista salasana" disabled required>
+
+                <label for="puhelin">Puhelinnumero</label>
+                <input type="tel" id="puhelin" name="puhelin" placeholder="esim. 050 123 4567">
+
+                <label for="tunnus">Käyttäjätunnus</label>
+                <input type="text" id="tunnus" name="tunnus" minlength="3" placeholder="Vähintään 3 merkkiä" required>
+
+                <label for="syntymaaika">Syntymäaika</label>
+                <input type="date" id="syntymaaika" name="syntymaaika" placeholder="pp.kk.vvvv">
+
+                <label for="maa">Maa</label>
+                <select id="maa" name="maa">
+                    <option value="">Valitse maa</option>
+                    <option value="Suomi">Suomi</option>
+                    <option value="Ruotsi">Ruotsi</option>
+                    <option value="Muu">Muu</option>
+                </select>
+            </div>
+
+            <label for="kayttoehdot">
+                <input type="checkbox" id="kayttoehdot" name="kayttoehdot" required> Hyväksyn
+            </label>
+            <span><a href="#">käyttöehdot</a></span>
+
+            <button type="submit">Lähetä</button>
+        </form>
+    </main>
+</body>
+
+</html>
