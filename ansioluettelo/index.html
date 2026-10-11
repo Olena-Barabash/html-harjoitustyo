@@ -18,10 +18,15 @@
         <nav>
             <!-- TODO: Add navigation -->
         </nav>
+
+        <!-- TODO: date of the last update (?) -->
     </header>
 
     <div class="print-controls">
         <!-- TODO: Select short/full CV version -->
+        <a href="./">Web</a>
+        <a id=" cv-short" href="#cv-short">Short CV</a>
+        <a id="cv-full" href="#cv-full">Full CV</a>
 
         <!-- TODO: Print version preview -->
     </div>
@@ -29,16 +34,15 @@
     <main class="resume">
         <section id="hero">
             <h1>Olena Barabash</h1>
-            <!-- TODO: Replace with "Software developer" -->
-            <p>Junior Full Stack / Front-End / Back-End -kehittäjä</p>
-
+            <p class="professional-title">Ohjelmistokehittäjä</p>
             <p>
-                Matemaattisen koulutustaustani, vahvan testiautomaatiokokemukseni sekä jonkin verran
-                ohjelmistokehityskokemukseni
-                ansiosta suuntaudun nyt web-kehitykseen. Etsin Junior Software Engineer -tehtävää tai vastaavia rooleja,
-                joissa voin
-                hyödyntää osaamistani ja käytännön taitojani nykyaikaisten, toimivien ja luotettavien verkkosovellusten
-                kehittämisessä.
+                Matematiikan yliopistotutkintoni sekä aiemman ohjelmistokehityskokemukseni ja vahvan
+                testiautomaatiotaustani pohjalta
+                kehitän parhaillaan osaamistani nykyaikaisessa ohjelmistokehityksessä. Etsin ohjelmistokehittäjän
+                tehtävää, jossa voin
+                hyödyntää kokemustani ja käytännön taitojani, osallistua toimivien ja hyödyllisten ohjelmistoratkaisujen
+                kehittämiseen
+                sekä kehittyä edelleen ammatillisesti.
             </p>
         </section>
 
@@ -49,33 +53,49 @@
             <a href="tel:+358413122983">+358413122983</a>
             <p>Kerava, Suomi</p>
             <!-- TODO: Do I need to change the link text so that it looks better? -->
-            <a href="https://www.linkedin.com/in/olenabarabash/" target="_blank"
-                rel="noopener noreferrer">https://www.linkedin.com/in/olenabarabash/</a>
+            <a href="https://www.linkedin.com/in/olenabarabash/" target="_blank" class="profile-link"
+                aria-label="Olena Barabashin LinkedIn-profiili" rel="noopener noreferrer">
+
+                <!-- LinkedIn icon -->
+                <!-- <svg aria-hidden="true">
+                    ...
+                </svg> -->
+
+                <span class="print-url">
+                    https://www.linkedin.com/in/olenabarabash/
+                </span>
+
+            </a>
         </section>
 
         <section id="summary">
             <h2>Yhteenveto</h2>
             <p>
-                Olen koulutukseltani matemaatikko ja minulla on laaja kokemus IT-alalta, mukaan lukien yli seitsemän
-                vuoden kokemus
-                testiautomaatiosta sekä muutaman kuukauden kokemus ohjelmistokehityksestä funktionaalisella
-                Flow9-ohjelmointikielellä.
-                Lisäksi minulla on yli kymmenen vuoden kokemus ohjelmistokehityksestä ja liiketoimintaprosessien
+                Olen koulutukseltani matemaatikko ja minulla on laaja kokemus IT-alalta. Olen työskennellyt yli
+                seitsemän vuotta
+                testiautomaation parissa. Lisäksi minulla on kokemusta ohjelmistokehittäjänä funktionaalista
+                Flow9-ohjelmointikieltä
+                käyttäen sekä yli kymmenen vuoden kokemus ohjelmistokehityksestä ja liiketoimintaprosessien
                 automatisoinnista
-                erikoistuneessa kehitysympäristössä Ukrainassa. Suoritin myös full stack -kehityksen opinnot kaksi
-                vuotta sitten ja
-                siihen liittyvän harjoittelun, jossa hyödynsin työssäni OpenAI API:a.
+                erikoistuneessa kehitysympäristössä Ukrainassa.
             </p>
             <p>
-                Olen nopea oppimaan ja pystyn sopeutumaan sekä reagoimaan tehokkaasti muuttuviin liiketoimintatarpeisiin
-                ja
-                prosesseihin. Ajattelutapani on analyyttinen ja ratkaisukeskeinen, ja osaan keskittyä hyvin meneillään
-                oleviin
-                tehtäviin. Olen asiakassuuntautunut, vastuullinen ja tarkka yksityiskohdissa. Työskentelen yhtä
-                sujuvasti sekä
-                itsenäisesti että osana tiimiä. Työskentelykieleni ovat pääasiassa englanti ja ukraina, ja opiskelen
-                parhaillaan suomen
-                kieltä.
+                Vuonna 2024 suoritin Full Stack Web Development -opinnot ja niihin liittyvän kahden kuukauden
+                harjoittelun, jossa sain
+                käytännön kokemusta nykyaikaisesta web-sovelluskehityksestä ja tekoälyn integroinnista sovelluksiin.
+                Tällä hetkellä
+                opiskelen Keudassa tieto- ja viestintätekniikan perustutkintoa tavoitteenani valmistua
+                ohjelmistokehittäjäksi
+                (opetuskieli: suomi).
+            </p>
+            <p>
+                Minulla on analyyttinen ajattelutapa, ja olen ratkaisukeskeinen. Opin uusia asioita nopeasti ja pidän
+                teknisten
+                ongelmien ratkaisemisesta. Olen asiakaslähtöinen ja kiinnitän huomiota yksityiskohtiin. Työskentelen
+                hyvin sekä
+                itsenäisesti että osana tiimiä. Työskentelykieleni ovat pääasiassa englanti ja ukraina. Opiskelen
+                aktiivisesti suomea,
+                mutta kielitaitoni ei vielä riitä päivittäiseen työviestintään suomeksi.
             </p>
         </section>
 
@@ -252,23 +272,74 @@
             <h2>Tekninen tausta</h2>
 
             <dl class="skills-list">
-                <dt>Ohjelmointikielet</dt>
-                <dd>JavaScript, TypeScript, SQL, Python, Java, C#, Flow9</dd>
+                <dt>Ohjelmointi- ja kyselykielet</dt>
+                <dd>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C#</li>
+                        <li>Flow9</li>
+                    </ul>
+                </dd>
 
                 <dt>Web-kehitys ja teknologiat</dt>
-                <dd>HTML, CSS, React, Node.js, PostgreSQL, Docker, Svelte 5, Deno, SQLAlchemy, FastAPI</dd>
+                <dd>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>PostgreSQL</li>
+                        <li>Docker</li>
+                        <li>Svelte 5</li>
+                        <li>Deno</li>
+                        <li>SQLAlchemy</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </dd>
 
-                <dt>AI-työkalut</dt>
-                <dd>OpenAI API</dd>
+                <dt>Tekoälyintegraatiot</dt>
+                <dd>
+                    <ul>
+                        <li>OpenAI API</li>
+                    </ul>
+                </dd>
 
                 <dt>Versionhallinta</dt>
-                <dd>Git, GitHub, Surround SCM</dd>
+                <dd>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Surround SCM</li>
+                    </ul>
+                </dd>
 
                 <dt>Testaus</dt>
-                <dd>Functional, GUI, Smoke, Regression, Exploratory, Unit testing</dd>
+                <dd>
+                    <ul class="testing-list">
+                        <li>Funktionaalinen testaus</li>
+                        <li>Käyttöliittymätestaus</li>
+                        <li>Savutestaus</li>
+                        <li>Regressiotestaus</li>
+                        <li>Tutkiva testaus</li>
+                        <li>Yksikkötestaus</li>
+                    </ul>
+
+                    <p class="testing-print">
+                        Funktionaalinen, GUI-, smoke-, regressio-, tutkiva ja yksikkötestaus
+                    </p>
+                </dd>
 
                 <dt>Testaustyökalut / -kehykset</dt>
-                <dd>Selenium WebDriver, SpecFlow</dd>
+                <dd>
+                    <ul>
+                        <li>Selenium WebDriver</li>
+                        <li>SpecFlow</li>
+                    </ul>
+                </dd>
             </dl>
         </section>
 
@@ -292,33 +363,34 @@
             <ol class="education">
                 <li>
                     <h3>Tieto- ja viestintätekniikan perustutkinto</h3>
-                    <p class="credential">Ohjelmistokehittäjä (opinnot kesken)</p>
+                    <p class="credential">Ohjelmistokehittäjä</p>
                     <p class="education-meta">
                         <span>Keuda</span> |
                         <span class="country">Suomi</span> |
                         <span class="period">
-                            <time datetime="2026-05">Toukokuu 2026</time> alkaen
+                            <time datetime="2026">2026</time> &ndash; nykyhetki
                         </span>
                     </p>
                 </li>
                 <li>
                     <h3>Full Stack Web Development Training for Immigrants</h3>
-                    <p class="credential">Todistus</p>
+                    <p class="credential">90 osp, suoritettu</p>
                     <p class="education-meta">
-                        <span>Omnia, Espoon Seudun Koulutuskuntayhtymä</span>|
-                        <span class="country">Ukraina</span> |
-                        <span class="period"><time datetime="2023-08">Elokuu 2023</time> &ndash;
-                            <time datetime="2024-05">Toukokuu 2024</time></span>
+                        <span>Omnia</span> |
+                        <span class="country">Suomi</span> |
+                        <span class="period"><time datetime="2023">2023</time> &ndash;
+                            <time datetime="2024">2024</time></span>
                     </p>
                 </li>
                 <li>
                     <h3>Matematiikka</h3>
-                    <p class="credential">Specialist (vastaa Ukrainan maisterin tutkintoa)</p>
+                    <p class="credential">Specialist (vastaa Ukrainassa maisterin tutkintoa)</p>
                     <p class="education-meta">
-                        <span>Donetskin kansallinen yliopisto (ent. Donetskin valtionyliopisto)</span>|
+                        <span>Donetskin kansallinen yliopisto</span> |
+                        <!-- TODO: <span>Donetskin kansallinen yliopisto (ent. Donetskin valtionyliopisto)</span>| ? -->
                         <span class="country">Ukraina</span> |
-                        <span class="period"><time datetime="1993-09">Syyskuu 1993</time> &ndash;
-                            <time datetime="1998-07">Heinäkuu 1998</time></span>
+                        <span class="period"><time datetime="1993">1993</time> &ndash;
+                            <time datetime="1998">1998</time></span>
                     </p>
                 </li>
             </ol>
@@ -349,7 +421,7 @@
                 <dd>B2</dd>
 
                 <dt>suomi</dt>
-                <dd>A2</dd>
+                <dd>A2-B1 (opinnot jatkuvat)</dd>
 
                 <dt>ukraina</dt>
                 <dd>äidinkieli</dd>
