@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="hero-wave"
+     viewBox="0 0 1440 100"
+     preserveAspectRatio="none"
+     aria-hidden="true">
+    <path d="M0,30 C400,50 700,100 1000,45 C1200,10 1350,20 1440,25 L1440,100 L0,100 Z" />
+</svg>

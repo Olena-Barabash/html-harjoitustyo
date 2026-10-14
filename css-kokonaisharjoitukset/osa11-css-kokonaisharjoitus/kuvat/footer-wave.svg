@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="footer-wave"
+     viewBox="0 0 1200 100"
+     preserveAspectRatio="none"
+     aria-hidden="true">
+    <path d="
+        M 0 58
+        C 120 46, 235 38, 350 40
+        C 540 43, 740 68, 950 67
+        C 1050 67, 1130 62, 1200 53
+        L 1200 0
+        L 0 0
+        Z
+    " />
+</svg>
