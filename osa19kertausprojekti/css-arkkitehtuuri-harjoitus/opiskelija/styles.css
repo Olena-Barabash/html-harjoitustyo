@@ -1,124 +1,188 @@
 /* TAHALLAAN HEIKKO CSS – älä jaa malliratkaisua heti */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #222;
-    background: #f6f6fb;
+
+/* 1. Added tokens, that replaced all the exact values colors, ftext and spacing sizes */
+/* 2. To satisfy the contrast rules for accessibility, tag color is replaced with #585858 */
+/* 3. Put all styles inside the @layer, except those that have '!important' (those left out of any @layer as they have to have th highest priority). This allows to remove '!important' and id-selectors */
+/* 4. Removed styles for '.sidebar .course-card' and ' #main .course-grid .card-title' since they are the same as for '.course-card' and '.card-title' inside th'course-grid'  */
+/* 5. Removed fixed height for '.course-card' since it breakes the whole layout. Istead use 'height: stretch;' */
+
+:root {
+    /* Värit */
+    --vari-tausta: #f6f6fb;
+
+    --vari-pinta-ensis: #fff;
+    --vari-pinta-toiss: #6432bb;
+    --vari-pinta-lisa: #ddd;
+
+    --vari-teksti-ensis: #222;
+    --vari-teksti-toiss: #6432bb;
+    --vari-teksti-lisa: white;
+    --vari-teksti-hillitty: #585858;
+
+    /* Koot */
+    --fonttikoko-sm: 0.75rem;
+    --fonttikoko-md: 1.5rem;
+    --fonttikoko-lg: 2.625rem;
+
+    --reunaviivan-sm: 1px;
+    --reunaviivan-md: 2px;
+    --pyöristys-sm: 8px;
+    --pyöristys-md: 12px;
+
+    --vali-xs: 0.5rem;
+    --vali-sm: 0.75rem;
+    --vali-md: 1.125rem;
+    --vali-lg: 1.25rem;
+    --vali-xl: 1.5rem;
+    --vali-2xl: 1.875rem;
 }
 
-#main .hero h1 {
-    color: #6432bb !important;
-    font-size: 42px;
-}
-
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #fff;
-}
-
-.site-header nav {
-    display: flex;
-    gap: 20px;
-}
-
-.logo {
-    color: #6432bb;
-    font-weight: bold;
-}
-
-.layout {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 30px;
-    padding: 24px;
-}
-
-.sidebar {
-    background: #fff;
-    padding: 20px;
-}
-
-.hero {
-    background: #fff;
-    padding: 24px;
-    margin-bottom: 30px;
-}
-
-#main #courses .course-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.course-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    height: 235px;
-}
-
-.sidebar .course-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    height: 235px;
-}
-
-#main .course-grid .course-card.featured {
-    border: 2px solid #6432bb !important;
-}
-
-.sidebar .course-card.featured {
-    border: 2px solid #6432bb !important;
-}
-
-.card-title {
-    color: #6432bb;
-    font-size: 24px;
-}
-
-#main .course-grid .card-title {
-    color: #6432bb;
-    font-size: 24px;
-}
-
-.tag {
-    color: #bbb;
-    font-size: 12px;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 18px;
-    background: #6432bb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all .25s;
-}
-
-.button:focus {
-    outline: none;
-}
-
-@media (min-width:900px) {
-    .course-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
+@layer base {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: var(--vari-teksti-ensis);
+        background: var(--vari-tausta);
     }
-}
 
-@media (max-width:700px) {
+    .hero h1 {
+        /* color: var(--vari-teksti-toiss) !important; */
+        /* color: green; */
+        font-size: var(--fonttikoko-lg);
+    }
+
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--vali-lg);
+        background: var(--vari-pinta-ensis);
+    }
+
+    .site-header nav {
+        display: flex;
+        gap: var(--vali-lg);
+    }
+
+    .logo {
+        color: var(--vari-teksti-toiss);
+        font-weight: bold;
+    }
+
     .layout {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: var(--vali-2xl);
+        padding: var(--vali-xl);
+    }
+
+    .sidebar {
+        background: var(--vari-pinta-ensis);
+        padding: var(--vali-lg);
+    }
+
+    .hero {
+        background: var(--vari-pinta-ensis);
+        padding: var(--vali-xl);
+        margin-bottom: var(--vali-2xl);
     }
 
     .course-grid {
-        grid-template-columns: 1fr !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--vali-lg);
+    }
+
+    .card-container {
+        container-type: inline-size;
+    }
+
+    .course-card {
+        background: var(--vari-pinta-ensis);
+        border: var(--reunaviivan-sm) solid var(--vari-pinta-lisa);
+        border-radius: var(--pyöristys-md);
+        padding: var(--vali-lg);
+        height: stretch;
+        /* height: 235px; */
+    }
+
+    /* .sidebar .course-card {
+        background: var(--vari-pinta-ensis);
+        border: var(--reunaviivan-sm) solid var(--vari-pinta-lisa);
+        border-radius: var(--pyöristys-md);
+        padding: var(--vali-lg);
+        height: 235px;
+    } */
+
+    /* #main .course-grid .course-card.featured {
+        border: var(--reunaviivan-md) solid var(--vari-pinta-toiss) !important;
+    }
+
+    .sidebar .course-card.featured {
+        border: var(--reunaviivan-md) solid var(--vari-pinta-toiss) !important;
+    } */
+
+    .card-title {
+        color: var(--vari-teksti-toiss);
+        font-size: var(--fonttikoko-md);
+    }
+
+    /* #main .course-grid .card-title {
+        color: var(--vari-teksti-toiss);
+        font-size: var(--fonttikoko-md);
+    } */
+
+    .tag {
+        color: var(--vari-teksti-hillitty);
+        font-size: var(--fonttikoko-sm);
+    }
+
+    .button {
+        display: inline-block;
+        padding: var(--vali-sm) var(--vali-md);
+        background: var(--vari-pinta-toiss);
+        color: var(--vari-teksti-lisa);
+        text-decoration: none;
+        border-radius: var(--pyöristys-sm);
+        transition: all .25s;
+    }
+
+    .button:focus {
+        outline: none;
+    }
+
+    @container (min-width:900px) {
+        .course-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--vali-xs);
+        }
+    }
+
+    @media (max-width:700px) {
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        /* .course-grid {
+            grid-template-columns: 1fr !important;
+        } */
+    }
+}
+
+h1 {
+    color: var(--vari-teksti-toiss);
+}
+
+.course-card.featured {
+    border: var(--reunaviivan-md) solid var(--vari-pinta-toiss);
+}
+
+.course-card.featured {
+    border: var(--reunaviivan-md) solid var(--vari-pinta-toiss);
+}
+
+@media (max-width:700px) {
+    .course-grid {
+        grid-template-columns: 1fr;
     }
 }
