@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Olena Barabash | Tulostettava CV (laaja versio)
+pageClass: cv-print
+---
+
+<header class="print-toolbar">
+    <a href="../">← Takaisin verkkoversioon</a>
+    <span>Laaja CV · A4</span>
+    <!-- TODO: Printer icon -->
+    <span>Tulosta: Ctrl+P</span>
+</header>
+
+<div class="print-controls">
+    <!-- TODO: Select short/full CV version -->
+    <a href="/">Web</a>
+
+    <!-- TODO: Print version preview -->
+</div>
+
+<main>
+    {% include "sections/hero.njk" %}
+    {% include "sections/contact.njk" %}
+    {% include "sections/summary.njk" %}
+    {% include "sections/soft-skills.njk" %}        
+    {% include "sections/technical-skills.njk" %}        
+    {% include "sections/education.njk" %}
+    {% include "sections/languages.njk" %}
+    {% include "sections/certifications.njk" %}
+    {% include "sections/experience.njk" %}
+</main>

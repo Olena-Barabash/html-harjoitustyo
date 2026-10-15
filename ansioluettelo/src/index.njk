@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Olena Barabash | CV
+pageClass: cv-web
+---
+
+<header class="site-header">
+    <nav>
+        <li><a href="#hero">Esittely</a></li>
+        <li><a href="#experience">Työkokemus</a></li>
+        <li><a href="#technical-skills">Tekninen tausta</a></li>
+        <li><a href="#soft-skills">Taidot</a></li>
+        <li><a href="#education">Koulutus</a></li>
+        <li><a href="#certifications">Sertifikaatit</a></li>
+        <li><a href="#languages">Kielitaito</a></li>
+    </nav>
+
+    <!-- TODO: date of the last update (?) -->
+</header>
+
+<div class="print-controls">
+    <details class="cv-menu">
+        <summary>
+            <!-- TODO: Printer icon -->
+            <span>Tulostettava CV</span>
+        </summary>
+
+        <ul>
+            <!-- <li>
+                <a href="cv-short/">Tiivis CV (1 sivu)</a>
+            </li> -->
+            <li>
+                <a href="cv-full/">Laaja CV (2+ sivua)</a>
+            </li>
+        </ul>
+    </details>
+</div>
+
+<main>
+    {% include "sections/hero.njk" %}
+    {% include "sections/contact.njk" %}
+    {% include "sections/summary.njk" %}
+    {% include "sections/experience.njk" %}
+    {% include "sections/technical-skills.njk" %}
+    {% include "sections/soft-skills.njk" %}
+    {% include "sections/education.njk" %}
+    {% include "sections/certifications.njk" %}
+    {% include "sections/languages.njk" %}
+</main>

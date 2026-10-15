@@ -1,2 +1,4 @@
 .vscode
 notes*
+node_modules/
+ansioluettelo/_site/
