@@ -1,0 +1,79 @@
+@layer base {
+    :root {
+        /* Text */
+        --color-text-primary: #19384D;
+        --color-text-secondary: #4D6877;
+        --color-text-muted: #708894;
+
+        /* Interactive elements */
+        --color-interactive: #176F89;
+        --color-interactive-hover: #10566D;
+        --color-focus: #1689A5;
+
+        /* Surfaces */
+        --color-surface: #FFFFFF;
+        --color-surface-translucent: rgb(255 255 255 / 72%);
+        --color-surface-subtle: rgb(255 255 255 / 45%);
+
+        /* Borders and separators */
+        --color-border: rgb(45 91 113 / 20%);
+        --color-divider: rgb(45 91 113 / 14%);
+
+        /* Accents */
+        --color-accent: #2189A2;
+        --color-accent-subtle: rgb(33 137 162 / 12%);
+    }
+
+    body {
+        width: 100%;
+        padding: 1% 5%;
+        background: url("../assets/images/cv-background-desktop-full-length-v3-crossings.webp") center / cover no-repeat;
+        
+        color: var(--color-text-primary);
+    }
+
+    a, a:visited {
+        color: inherit;
+    }
+
+    .main-menu, .print-menu {
+        list-style: none;
+    }
+
+    @media (min-width: 900px) {
+        body {
+            background: url("../assets/images/cv-background-mobile-full-length-v2-large.webp") center / cover no-repeat;
+        }
+    }
+}
+
+@layer layout {
+    .site-header {
+        width: 100%;
+        /* position: sticky;
+        top: 0%;
+        left: 5%;
+        background-color: var(--color-surface-subtle); */
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    /* nav {
+        display: flex;
+    } */
+
+    .main-menu {
+        display: flex;
+        
+        /* width:  */
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .main-menu a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}

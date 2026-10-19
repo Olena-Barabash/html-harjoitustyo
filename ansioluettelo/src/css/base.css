@@ -1,0 +1,64 @@
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    img,
+    picture {
+        display: block;
+        max-width: 100%;
+    }
+/* 
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    } */
+}
+
+@layer base {
+    :root {
+        --font-primary: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        --font-secondary: "Manrope", "Avenir Next", "Montserrat", Arial, sans-serif;
+    }
+
+    @font-face {
+        font-family: "Inter";
+        src: url("../assets/fonts/InterVariable.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Manrope";
+        src: url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 200 800;
+        font-display: swap;
+    }
+
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        font-family: var(--font-primary);
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    h1, h2, h3 {
+        font-family: var(--font-secondary);
+        line-height: 1.2;
+    }
+}

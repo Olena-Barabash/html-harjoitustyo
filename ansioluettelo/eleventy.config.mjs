@@ -3,6 +3,10 @@ export default function (eleventyConfig) {
         "src/css": "css"
     });
 
+    eleventyConfig.addPassthroughCopy({
+        "assets": "assets"
+    });
+
     return {
         dir: {
             input: "src",

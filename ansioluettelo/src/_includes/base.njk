@@ -9,9 +9,12 @@
 
     <title>{{ title }}</title>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/screen.css">
-    <link rel="stylesheet" href="css/print.css">
-</head>
+    {% if pageClass == "cv-web" %}
+        <link rel="stylesheet" href="/css/screen.css">
+    {% elif pageClass == "cv-print" %}
+        <link rel="stylesheet" href="/css/print.css">
+    {% endif %}
+    </head>
 <body class="{{ pageClass }}">
     {{ content | safe }}
 </body>
