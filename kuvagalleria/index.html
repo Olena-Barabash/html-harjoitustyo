@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuvagalleria | Luontogalleria</title>
+    <script src="./js/index.js" defer></script>
+    <link rel="stylesheet" href="css/tyyli.css">
+</head>
+
+<body>
+    <header>
+        <nav class="paanavigaatio">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="galleria-kontti">
+            <h1>Luontogalleria</h1>
+
+            <div class="suodatin-kontti">
+                <p class="ohje">
+                    * Näppäimistönavigointi: käytä nuolinäppäimiä ← ja → vaihtaaksesi suodatinta, kun kohdistus on
+                    suodattimissa. Voit myös <a href="#galleria-loppu" class="ohita-galleria">
+                        ohittaa kuvagallerian
+                    </a>.
+                </p>
+                <button type="button" class="suodatin-painike" popovertarget="suodatinlista"
+                    aria-label="Valitse kuvakategoria">
+                    Kaikki
+                </button>
+
+                <ul class="suodattimet" id="suodatinlista" popover>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="kaikki" checked>
+                            Kaikki
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="luonto">
+                            Luonto
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="kaupungit">
+                            Kaupungit
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="sillat">
+                            Sillat
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="auringonlaskut">
+                            Auringonlaskut
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="meri">
+                            Meri ja valtameri
+                        </label>
+                    </li>
+                    <li>
+                        <label class="suodatin">
+                            <input type="radio" name="suodatin" value="elaimet">
+                            Eläimet
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="kuvat-kontti">
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/kuningaskalastaja-lennossa.webp" width="900" height="600"
+                            alt="Kirkkaanvärinen kuningaskalastaja lennossa.">
+
+                        <figcaption id="kuva-1" class="kuvan-tiedot" popover>
+                            <h2>Lentävä kuningaskalastaja</h2>
+
+                            <p>Kuningaskalastaja lentää matalalla siivet tiiviisti vartalon lähellä. Sininen selkä ja
+                                oranssi vatsapuoli
+                                erottuvat pehmeäksi sumentuneesta taustasta.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Prasan_Shrestha" target="_blank"
+                                    rel="noopener noreferrer">Prasan Shrestha</a></p>
+                            <p>Kuvauspaikka: Taudaha-järvi, Kirtipur, Nepal</p>
+                            <p>Kuvauspäivä: <time datetime="2023-12-01">1.12.2023</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Common_kingfisher_in_flight.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <button type="button" class="tiedot-painike" popovertarget="kuva-1"
+                        aria-label="Näytä kuvan tiedot">ℹ</button>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/thudufushin-vesihuvilat.webp" width="900" height="600"
+                            alt="Palmujen reunustama kulkusilta johtaa veden päälle rakennettuihin huviloihin.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Thudufushin trooppinen saari</h2>
+
+                            <p>Palmujen reunustama puinen kulkusilta johtaa Thudufushin veden päälle rakennettuihin
+                                huviloihin. Vaalea
+                                hiekka ja kirkas, turkoosi vesi korostavat trooppista rantamaisemaa.</p>
+                            <p>Tekijä: <a
+                                    href="https://commons.wikimedia.org/wiki/File:Diamonds_Thudufushi_Beach_and_Water_Villas,_May_2017_-09.jpg"
+                                    target="_blank" rel="noopener noreferrer">Martin Falbisoner</a></p>
+                            <p>Kuvauspaikka: Thudufushi, Ari-atolli, Malediivit</p>
+                            <p>Kuvauspäivä: <time datetime="2017-05-19">19.5.2017</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Diamonds_Thudufushi_Beach_and_Water_Villas,_May_2017_-09.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/baskimaan-rantakalliot.webp" width="900" height="600"
+                            alt="Geologisesti näyttävät kalliokerrostumat Atlantin rannikolla.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Baskimaan kerroksellinen rannikko</h2>
+
+                            <p>Baskimaan rannikon kallioissa erottuvat pitkät, vinoon asettuneet kivikerrokset. Atlantin
+                                aallot
+                                seuraavat Deban ja Zumaian välisen rantaviivan kaarta.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Milseburg" target="_blank"
+                                    rel="noopener noreferrer">Jörg Braukmann</a></p>
+                            <p>Kuvauspaikka: Deban ja Zumaian välinen rannikko, Baskimaa, Espanja</p>
+                            <p>Kuvauspäivä: <time datetime="2022-08-08">8.8.2022</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Flysch_coast_between_Deba_and_Zumaia.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/hiekkakalliot-gerakas.webp" width="900" height="600"
+                            alt="Eroosion muovaamat vaaleat hiekkakivimuodostelmat Kreikassa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Gerakasin valkoiset hiekkakivivuoret</h2>
+
+                            <p>Vaaleat, eroosion uurtelemat hiekkakivimuodostelmat kohoavat Gerakasin rannan tuntumassa
+                                Zakynthoksella.
+                                Sininen meri ja matala rannikkokasvillisuus kehystävät jyrkkiä rinteitä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Kallerna" target="_blank"
+                                    rel="noopener noreferrer">kallerna</a></p>
+                            <p>Kuvauspaikka: Gerakasin ranta, Zakynthos, Kreikka</p>
+                            <p>Kuvauspäivä: <time datetime="2025-08-20">20.8.2025</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:White_Sandstone_Mountains_Gerakas_4.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/juokseva-norsulauma.webp" width="900" height="600"
+                            alt="Norsulauma juoksee kohti kuvaajaa pölyisellä ja mutaisella maalla.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Juokseva norsulauma</h2>
+
+                            <p>Norsulauma juoksee kohti kuvaajaa Tsavon kansallispuistossa. Eläinten korvat, kärsät ja
+                                mutaiset jalat
+                                erottuvat lämpimänsävyistä maata vasten.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Byrdyak" target="_blank"
+                                    rel="noopener noreferrer">Byrdyak</a></p>
+                            <p>Kuvauspaikka: Tsavon kansallispuisto, Kenia</p>
+                            <p>Kuvauspäivä: <time datetime="2015-08-21">21.8.2015</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Elephant_running.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti sillat">
+                    <figure>
+                        <img src="./kuvat/golden-gate-silta.webp" width="900" height="600"
+                            alt="Punainen riippusilta ja Tyynenmeren kallioinen rannikko.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Golden Gate Bridge rannikolta nähtynä</h2>
+
+                            <p>Golden Gate -sillan punaiset tornit ja riippukaapelit kohoavat San Franciscon rannikon
+                                yllä.
+                                Marshall’s
+                                Beachilta kuvatussa näkymässä etualan kivet ja aallot tuovat siltaan merellisen
+                                kehyksen.
+                            </p>
+                            <p>Tekijä: <a href="https://www.wikidata.org/wiki/Q57175365" target="_blank"
+                                    rel="noopener noreferrer">©
+                                    Frank Schulenburg</a></p>
+                            <p>Kuvauspaikka: Marshall’s Beach, San Francisco, Kalifornia, Yhdysvallat</p>
+                            <p>Kuvauspäivä: <time datetime="2018-03-03">3.3.2018</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_March_2018.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/skradinski-buk.webp" width="900" height="600"
+                            alt="Rehevän kasvillisuuden ympäröimä monitasoinen vesiputous.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Skradinski buk -vesiputous</h2>
+
+                            <p>Skradinski bukin vesi virtaa useina putouksina vehreän kasvillisuuden keskellä Krkan
+                                kansallispuistossa.
+                                Valkoiset kuohut erottuvat kirkkaasta, vihertävästä vedestä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Skot" target="_blank"
+                                    rel="noopener noreferrer">Skot</a></p>
+                            <p>Kuvauspaikka: Skradinski buk, Krkan kansallispuisto, Kroatia</p>
+                            <p>Kuvauspäivä: <time datetime="2016-08-16">16.8.2016</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Skradinski_buk_waterfall_%E2%80%93_NP_Krka_%E2%80%93_2016.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/porto-covo-ilmasta.webp" width="900" height="600"
+                            alt="Ilmakuva Porto Covon rannikkokylästä, rakennuksista ja merenlahdista.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Porto Covo ilmasta nähtynä</h2>
+
+                            <p>Porto Covon rakennukset, kadut ja pienet merenlahdet näkyvät ylhäältä otetussa
+                                ilmakuvassa.
+                                Portugalin
+                                rannikkokylä muodostaa tiiviin kokonaisuuden kallioisen rantaviivan tuntumassa.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Alvesgaspar" target="_blank"
+                                    rel="noopener noreferrer">Alvesgaspar</a></p>
+                            <p>Kuvauspaikka: Porto Covo, Portugali</p>
+                            <p>Kuvauspäivä: <time datetime="2017-08-12">12.8.2017</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Porto_Covo_August_2017-4.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/revontulet-virossa.webp" width="900" height="600"
+                            alt="Tähtitaivas ja himmeää revontulivaloa puiden yllä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Revontulet yötaivaalla</h2>
+
+                            <p>Tähdet ja himmeä revontulivalo näkyvät Länsi-Viron yötaivaalla. Puiden tummat siluetit
+                                rajaavat
+                                horisonttia, jonka yllä hehkuu lämminsävyinen valokaistale.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:KristianPikner" target="_blank"
+                                    rel="noopener noreferrer">Kristian Pikner</a></p>
+                            <p>Kuvauspaikka: Läänerannan kunta, Länsi-Viro</p>
+                            <p>Kuvauspäivä: <time datetime="2017-09-15">15.9.2017</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Virmalised_15.09.2017_-_Aurora_Borealis_15.09.2017_copy.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/federseen-ruovikko.webp" width="900" height="600"
+                            alt="Puinen kulkureitti ja kaide ruovikon keskellä matalalta paistavan auringon valossa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Federsee-järven ruovikko auringon valossa</h2>
+
+                            <p>Puinen kulkureitti ja sen kaide johtavat katseen Federseen ruovikon halki kohti
+                                horisonttia.
+                                Matala
+                                aurinko valaisee rantakasvillisuutta ja heijastuu kaiteen pintaan.</p>
+                            <p>Tekijä: <a
+                                    href="https://commons.wikimedia.org/wiki/File:Sunset_at_Federsee,_Bad_Buchau_by_MFOXMedia.jpg"
+                                    target="_blank" rel="noopener noreferrer">MFOXMedia</a></p>
+                            <p>Kuvauspaikka: Federsee, Bad Buchau, Saksa</p>
+                            <p>Kuvauspäivä: <time datetime="2025-05-17">17.5.2025</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Sunset_at_Federsee,_Bad_Buchau_by_MFOXMedia.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p>Auringonlaskua koskeva kuvaus ja kuvausaika ovat ristiriidassa: kellonaika on klo 13.02.
+                                Vuorokaudenaikaa
+                                ei ole vahvistettu.</p>
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY 4.0 – Nimeä 4.0
+                                        Kansainvälinen</a> ·
+                                    Rajattu 3:2, pienennetty ja
+                                    muunnettu WebP-muotoon.</small></p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/leijona-lahikuvassa.webp" width="900" height="600"
+                            alt="Urosleijona lepää kalliolla; lähikuvassa näkyvät kasvot ja harja.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Afrikkalainen leijona</h2>
+
+                            <p>Urosleijona lepää kalliolla Touroparc-eläintarhassa. Lähikuva tuo esiin sen vaaleat
+                                silmät,
+                                kuonon ja
+                                tuuhean harjan.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Cl%C3%A9ment_Bardot"
+                                    target="_blank" rel="noopener noreferrer">Clément Bardot</a></p>
+                            <p>Kuvauspaikka: Touroparc Zoo, Saône-et-Loire, Ranska</p>
+                            <p>Kuvauspäivä: <time datetime="2014-03-16">16.3.2014</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Lion_d%27Afrique.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/merikilpikonna-moalboalissa.webp" width="900" height="600"
+                            alt="Merikilpikonna ui matalassa, kirkkaassa vedessä kallioisen pohjan yllä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Merikilpikonna Moalboalissa</h2>
+
+                            <p>Merikilpikonna ui kirkkaassa vedessä Moalboalin kivisen merenpohjan yllä. Kilven kuviot
+                                ja
+                                eturaajojen
+                                liike erottuvat sinivihreän veden keskeltä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Iampjanz" target="_blank"
+                                    rel="noopener noreferrer">Iampjanz</a></p>
+                            <p>Kuvauspaikka: Moalboal, Filippiinit</p>
+                            <p>Kuvauspäivä: <time datetime="2026-05-10">10.5.2026</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Sea_Turtle_in_Moalboal_4.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/mekong-luang-prabang.webp" width="900" height="600"
+                            alt="Mekongjoen, pilvien ja vuorten heijastuksia Luang Prabangissa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Luang Prabangin jokimaisema</h2>
+
+                            <p>Mekongjoen tyyni pinta heijastaa pilviä ja Luang Prabangin ympäristön vuoria. Wat Long
+                                Koonin
+                                suunnalta
+                                avautuvassa näkymässä rantakasvillisuus ja kaukaiset rakennukset jäävät maiseman osaksi.
+                            </p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Wat Long Koon, Luang Prabang, Laos</p>
+                            <p>Kuvauspäivä: <time datetime="2023-09-16">16.9.2023</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Water_reflection_of_clouds_and_Luang_Prabang_cityscape_from_Wat_Long_Koon_evening_Laos.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/amsterdamin-kanavatalot.webp" width="900" height="600"
+                            alt="Damrakin kanavatalot ja niiden heijastukset tummien pilvien alla. Taustalla näkyy Oude Kerk -kirkon torni.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Amsterdamin värikkäät kanavatalot</h2>
+
+                            <p>Amsterdamin Damrakin kapeat kanavatalot kohoavat suoraan veden ääreltä tummien pilvien
+                                alla.
+                                Julkisivut
+                                heijastuvat kanavaan, ja taustalla näkyy Oude Kerk -kirkon torni.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Damrak, Amsterdam, Alankomaat</p>
+                            <p>Kuvauspäivä: <time datetime="2024-04-24">24.4.2024</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/sadepilvet-malediiveilla.webp" width="900" height="600"
+                            alt="Ihminen katsoo merta Malediiveilla tummien sadepilvien alla.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Meri ja sadepilvet Malediiveilla</h2>
+
+                            <p>Ihminen katsoo merta Malediivien hiekkasärkältä tummien sadepilvien alla. Turkoosinvihreä
+                                vesi ja
+                                horisontin sadejuovat luovat dramaattisen merimaiseman.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Pittigrilli" target="_blank"
+                                    rel="noopener noreferrer">Pittigrilli</a></p>
+                            <p>Kuvauspaikka: Malediivit; tarkkaa hiekkasärkkää ei vahvistettu</p>
+                            <p>Kuvauspäivä: <time datetime="2012-05-29">29.5.2012</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Man_on_sand_bank_in_the_Maldives_looking_at_sea.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/peytojarvi-talvella.webp" width="900" height="600"
+                            alt="Kanadan Kalliovuorten jäinen alppimaisema.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Peyto-järvi talvella</h2>
+
+                            <p>Lumiset vuoret ja havumetsä ympäröivät talvista Peyto-järveä Banffin kansallispuistossa.
+                                Jäätynyt järvi
+                                erottuu vaaleana vuorenrinteiden välissä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:JakubFrys" target="_blank"
+                                    rel="noopener noreferrer">Jakub Fryš</a></p>
+                            <p>Kuvauspaikka: Peyto-järvi, Banffin kansallispuisto, Alberta, Kanada</p>
+                            <p>Kuvauspäivä: <time datetime="2019-01-31">31.1.2019</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Peyto_Lake_in_winter.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti sillat">
+                    <figure>
+                        <img src="./kuvat/rakotzbrucke-heijastus.webp" width="900" height="600"
+                            alt="Kaareva kivisilta, jonka heijastus muodostaa lähes täydellisen ympyrän.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Rakotzbrücke – kivisilta ja sen heijastus</h2>
+
+                            <p>Rakotzbrücken kivinen kaari ja sen heijastus muodostavat lähes täydellisen ympyrän veden
+                                pinnalle.
+                                Vehreät puut ja sammaleiset rannat ympäröivät siltaa Kromlaussa.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/File:Rakotzbr%C3%BCcke.jpg"
+                                    target="_blank" rel="noopener noreferrer">A.Landgraf</a></p>
+                            <p>Kuvauspaikka: Kromlau, Saksi, Saksa</p>
+                            <p>Kuvauspäivä: <time datetime="2016-08-10">10.8.2016</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Rakotzbr%C3%BCcke.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/auringonlasku-enoshimassa.webp" width="900" height="600"
+                            alt="Japanilainen rannikkomaisema lämpimässä auringonlaskun valossa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Auringonlasku Enoshiman saarella</h2>
+
+                            <p>Aurinko näkyy vaalean taivaan keskellä Enoshiman saarelta avautuvassa merimaisemassa.
+                                Etualan
+                                kaiteet,
+                                valaisin ja rakennuksen yksityiskohdat kehystävät näkymää.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Dandy1022" target="_blank"
+                                    rel="noopener noreferrer">Dandy1022</a></p>
+                            <p>Kuvauspaikka: Enoshima, Kanagawa, Japani</p>
+                            <p>Kuvauspäivä: <time datetime="2014-07-25">25.7.2014</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Sunset_in_Enoshima_Island.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/bostonin-kaupunkisiluetti.webp" width="900" height="600"
+                            alt="Korkeita rakennuksia ja kaupunkipanoraama Charlesjoen toiselta rannalta.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Bostonin kaupunkisiluetti</h2>
+
+                            <p>Bostonin korkeat rakennukset kohoavat Charlesjoen toisella puolella vaaleanpunertavaa
+                                taivasta vasten.
+                                Harvard Bridgeltä kuvattu kaupunkinäkymä yhdistää rantaviivan, veden ja tiiviin
+                                rakennuskannan.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:King_of_Hearts" target="_blank"
+                                    rel="noopener noreferrer">King of Hearts</a></p>
+                            <p>Kuvauspaikka: Harvard Bridge, Cambridge, Massachusetts, Yhdysvallat; näkymä Bostoniin</p>
+                            <p>Kuvauspäivä: <time datetime="2015-11-27">27.11.2015</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Boston_skyline_from_Cambridge_November_2015_panorama_1.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/firenzen-tuomiokirkko.webp" width="900" height="600"
+                            alt="Näkymä Firenzen kupolikirkolle Michelangelon kukkulalta.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Firenzen historiallinen keskusta</h2>
+
+                            <p>Firenzen tuomiokirkon suuri kupoli kohoaa kaupungin rakennusten yläpuolelle illan
+                                hämärässä.
+                                Michelangelon kukkulalta kuvatussa näkymässä erottuvat myös kellotorni ja kaukaiset
+                                kukkulat.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:PetarM" target="_blank"
+                                    rel="noopener noreferrer">Petar Milošević</a></p>
+                            <p>Kuvauspaikka: Firenze, Toscana, Italia; näkymä Piazzale Michelangelolta</p>
+                            <p>Kuvauspäivä: <time datetime="2014-10-25">25.10.2014</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/longshengin-riisiterassit.webp" width="900" height="600"
+                            alt="Vuorten rinteitä myötäilevät, kaarevat riisipellot.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Longshengin riisiterassit</h2>
+
+                            <p>Longshengin riisiterassit kiertävät vuorenrinteitä kaarevina, päällekkäisinä vyöhykkeinä.
+                                Kellertävät
+                                pellot, kapeat polut ja ympäröivät rinteet muodostavat kerroksellisen maiseman.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:King_of_Hearts" target="_blank"
+                                    rel="noopener noreferrer">King of Hearts</a></p>
+                            <p>Kuvauspaikka: Longsheng, Guangxi, Kiina</p>
+                            <p>Kuvauspäivä: <time datetime="2017-11-22">22.11.2017</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Longsheng_Rice_Terraces_November_2017_014.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/rerikin-hiekkaranta.webp" width="900" height="600"
+                            alt="Näkymä Itämeren rantaviivalle kukkulalta.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Itämeren rannikko Rerikissä</h2>
+
+                            <p>Rerikin pitkä hiekkaranta ja rantatuolit levittäytyvät Itämeren äärelle. Schmiedebergin
+                                kukkulalta
+                                kuvatussa näkymässä aallot, rantakasvillisuus ja pilvinen taivas muodostavat avaran
+                                maiseman.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Radomianin" target="_blank"
+                                    rel="noopener noreferrer">Radomianin</a></p>
+                            <p>Kuvauspaikka: Schmiedeberg, Rerik, Saksa</p>
+                            <p>Kuvauspäivä: <time datetime="2025-06-23">23.6.2025</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Baltic_Sea_view_from_Schmiedeberg_hill_in_Rerik,_2025-06-23.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/riisipellon-iltataivas.webp" width="900" height="600"
+                            alt="Vaaleanpunainen ja sininen iltataivas heijastuu veden peittämään riisipeltoon.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Vaaleanpunaiset pilvet riisipellon yllä</h2>
+
+                            <p>Don Detin riisipellon vesi heijastaa sinisiä ja vaaleanpunaisia pilviä iltahämärässä.
+                                Tummat
+                                puut ja
+                                kapeat peltokaistaleet jäsentävät värikästä maisemaa.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Don Det, Si Phan Don, Laos</p>
+                            <p>Kuvauspäivä: <time datetime="2024-08-09">9.8.2024</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Colorful_sky_with_pink_and_blue_clouds_reflecting_in_the_water_of_a_paddy_field_at_dusk_in_Don_Det_Laos.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/kultasilmainen-lehtisammakko.webp" width="900" height="600"
+                            alt="Vihreä, kultasilmäinen lehtisammakko lehden päällä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Kultasilmäinen lehtisammakko</h2>
+
+                            <p>Vihreä lehtisammakko istuu leveän lehden päällä Costa Rican Herediassa. Kultainen silmä
+                                ja
+                                sinertävät
+                                kyljet erottuvat pehmeästä vihreästä taustasta.</p>
+                            <p>Tekijä: <a href="https://www.wikidata.org/wiki/Q54800218" target="_blank"
+                                    rel="noopener noreferrer">Charles J. Sharp</a></p>
+                            <p>Kuvauspaikka: Heredia, Costa Rica</p>
+                            <p>Kuvauspäivä: <time datetime="2019-05-01">1.5.2019</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Golden-eyed_tree_frog_(Agalychnis_annae).jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä. Kuva: <a
+                                        href="https://www.sharpphotography.co.uk/" target="_blank"
+                                        rel="noopener noreferrer">Sharp
+                                        Photography</a>. Alkuperäinen kuva on yhdistetty kahdesta eri tarkennuksella
+                                    otetusta
+                                    kuvasta.</small></p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/singaporen-marina-bay.webp" width="900" height="600"
+                            alt="Marina Bayn rakennuksia, kelluva esiintymislava ja liikenneväyliä korkealta nähtynä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Singaporen Marina Bay korkealta nähtynä</h2>
+
+                            <p>Singaporen Marina Bay näkyy korkealta Marina Bay Sandsin näköalatasanteelta. Kelluva
+                                esiintymislava,
+                                kaartuvat liikenneväylät ja korkeat rakennukset muodostavat tiiviin kaupunkimaiseman.
+                            </p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Marina Bay Sands, Singapore</p>
+                            <p>Kuvauspäivä: <time datetime="2018-06-10">10.6.2018</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Floating_Platform_and_illuminated_East_Coast_Parkway_seen_from_the_sky_observation_deck_of_Marina_Bay_Sands_Singapore.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/porto-covon-aallot.webp" width="900" height="600"
+                            alt="Voimakkaat aallot iskeytyvät Portugalin kallioiseen rannikkoon.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Atlantin murtuvat aallot</h2>
+
+                            <p>Voimakkaat aallot kuohuvat Porto Covon kallioisella Atlantin rannikolla. Tumma
+                                rantakallio ja
+                                sen pieni
+                                majakka erottuvat vaahtoavan veden ja harmaan taivaan välissä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Alvesgaspar" target="_blank"
+                                    rel="noopener noreferrer">Alvesgaspar</a></p>
+                            <p>Kuvauspaikka: Porto Covo, Portugali</p>
+                            <p>Kuvauspäivä: <time datetime="2015-12-31">31.12.2015</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Porto_Covo_January_2016-3a.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p>Kuvauspäivä on epävarma: päivämäärä 31.12.2015 ja vuoden ensimmäistä päivää koskeva
+                                kuvaus
+                                ovat
+                                ristiriidassa.</p>
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/kameli-tharin-autiomaassa.webp" width="900" height="600"
+                            alt="Kamelin ja ihmisten siluetit Tharin autiomaan hiekkadyynillä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Tharin autiomaa</h2>
+
+                            <p>Kamelin, sen selässä istuvien ihmisten ja taluttajan siluetit piirtyvät vaaleaa taivasta
+                                vasten Tharin
+                                autiomaassa. Hiekkadyynin tumma harjanne kulkee kuvan etualalla.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Cl%C3%A9ment_Bardot"
+                                    target="_blank" rel="noopener noreferrer">Clément Bardot</a></p>
+                            <p>Kuvauspaikka: Tharin autiomaa, Intia</p>
+                            <p>Kuvauspäivä: <time datetime="2016-02-15">15.2.2016</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:D%C3%A9sert_du_Thar.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/lvivin-kaupungintalo.webp" width="900" height="600"
+                            alt="Historiallisen kaupungin valaistu arkkitehtuuri yöaikaan.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Lvivin kaupungintalo yöllä</h2>
+
+                            <p>Lvivin valaistu kaupungintalo ja sen torni erottuvat kaupungin tummasta yömaisemasta.
+                                Ympäröivien
+                                rakennusten katot, kadut ja valot muodostavat laajan kaupunkinäkymän.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Vian" target="_blank"
+                                    rel="noopener noreferrer">Vian</a></p>
+                            <p>Kuvauspaikka: Lviv, Ukraina</p>
+                            <p>Kuvauspäivä: <time datetime="2017-12-17">17.12.2017</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0_%D1%80%D0%B0%D1%82%D1%83%D1%88%D0%B0_%D0%B2%D0%BD%D0%BE%D1%87%D1%96.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti sillat">
+                    <figure>
+                        <img src="./kuvat/togetsukyon-silta.webp" width="900" height="600"
+                            alt="Perinteinen japanilainen silta, joki ja ympäröivät vuoret.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Togetsu-kyō-silta kultaisessa valossa</h2>
+
+                            <p>Togetsu-kyō-silta ulottuu joen yli Kiotossa metsäisten rinteiden edessä. Veden
+                                heijastukset,
+                                rantakasvillisuus ja sillan pitkä rakenne muodostavat rauhallisen maiseman.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Kioto, Japani</p>
+                            <p>Kuvauspäivä: <time datetime="2019-06-10">10.6.2019</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Togetsu-ky%C5%8D_bridge_at_golden_hour,_Kyoto,_Japan.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti kaupungit">
+                    <figure>
+                        <img src="./kuvat/melbournen-kaupunkisiluetti.webp" width="900" height="600"
+                            alt="Melbournen rakennuksia ja rantareitti Point Ormondista nähtynä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Melbournen kaupunkisiluetti</h2>
+
+                            <p>Melbournen kaupunkisiluetti levittäytyy veden taakse Point Ormondista nähtynä. Etualan
+                                rantareitti ja
+                                kasvillisuus johtavat katseen lahden yli korkeisiin rakennuksiin.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:%E6%9D%8E%E6%B2%9B%E9%92%8A"
+                                    target="_blank" rel="noopener noreferrer">李沛钊</a></p>
+                            <p>Kuvauspaikka: Point Ormond, Melbourne, Australia</p>
+                            <p>Kuvauspäivä: <time datetime="2022-02-26">26.2.2022</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:City_Skyline_of_Melbourne.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/perhonen-vastavalossa.webp" width="900" height="600"
+                            alt="Vaaleasiipinen, mustakuvioinen perhonen kasvilla vastavalossa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Perhonen läpikuultavassa auringonvalossa</h2>
+
+                            <p>Vaaleasiipinen, mustakuvioinen perhonen lepää kasvilla Butterfly Worldissa Floridassa.
+                                Vastavalo kuultaa
+                                siipien läpi ja korostaa niiden kuviointia.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Rhododendrites" target="_blank"
+                                    rel="noopener noreferrer">Rhododendrites</a></p>
+                            <p>Kuvauspaikka: Butterfly World, Florida, Yhdysvallat</p>
+                            <p>Kuvauspäivä: <time datetime="2023-01-01">1.1.2023</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Rice_paper_butterfly_with_sunlight_shining_through_(16709).jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/ukkospilvet-alburyssa.webp" width="900" height="600"
+                            alt="Näyttävä pilvimuodostelma ja ilta-auringon värjäämä taivas.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Ukkospilvet auringonlaskussa</h2>
+
+                            <p>Suuri ukkospilvi hehkuu keltaisen ja oranssin sävyissä Alburyn yllä Australiassa. Pilven
+                                valaistu reuna
+                                erottuu tummemmasta taivaasta ja alhaalla näkyvästä maisemasta.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Thennicke" target="_blank"
+                                    rel="noopener noreferrer">Thennicke</a></p>
+                            <p>Kuvauspaikka: Albury, Uusi Etelä-Wales, Australia</p>
+                            <p>Kuvauspäivä: <time datetime="2016-12-24">24.12.2016</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Cumulonimbus_sunset_panorama,_Albury_NSW_Australia.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.
+                                    Alkuperäinen
+                                    panoraama on
+                                    yhdistetty kahdesta kuvasta Hugin-ohjelmalla.</small></p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/taneyjarvi.webp" width="900" height="600"
+                            alt="Vuorten ja metsien ympäröimä sveitsiläinen alppijärvi.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Lac de Taney</h2>
+
+                            <p>Taneyjärvi levittäytyy vehreiden rantojen ja jyrkkien vuorten väliin Sveitsin Valais’ssa.
+                                Metsäiset
+                                rinteet ja avoimet rantaniityt tuovat maisemaan vaihtelevia vihreän sävyjä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Espandero" target="_blank"
+                                    rel="noopener noreferrer">Christian David</a></p>
+                            <p>Kuvauspaikka: Taney, Vouvry, Valais, Sveitsi</p>
+                            <p>Kuvauspäivä: <time datetime="2025-06-29">29.6.2025</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Lac_de_Taney_depuis_Taney.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/point-reyesin-rannikko.webp" width="900" height="600"
+                            alt="Tyynenmeren jyrkkä rannikko ja avara valtamerimaisema.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Point Reyesin rantakalliot</h2>
+
+                            <p>Point Reyesin jyrkät rantakalliot kaartuvat Tyynenmeren aaltojen ylle. Vihreät rinteet ja
+                                punertavat
+                                kallioseinämät vuorottelevat Chimney Rockilta avautuvassa näkymässä.</p>
+                            <p>Tekijä: <a href="https://www.wikidata.org/wiki/Q57175365" target="_blank"
+                                    rel="noopener noreferrer">©
+                                    Frank Schulenburg</a></p>
+                            <p>Kuvauspaikka: Chimney Rock, Point Reyes National Seashore, Kalifornia, Yhdysvallat</p>
+                            <p>Kuvauspäivä: <time datetime="2016-12-11">11.12.2016</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Coastline_as_seen_from_Chimney_Rock,_Point_Reyes_National_Seashore.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/auringonlasku-namibissa.webp" width="900" height="600"
+                            alt="Voimakkaan punainen aurinko autiomaan horisontissa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Auringonlasku Namibin autiomaassa</h2>
+
+                            <p>Kirkas aurinko painuu Namibin autiomaan horisonttiin oranssinpunaisen taivaan keskellä.
+                                Tumma
+                                maanpinta
+                                ja voimakkaat värisävyt korostavat auringon muotoa.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Giles_Laurent" target="_blank"
+                                    rel="noopener noreferrer">Giles Laurent</a></p>
+                            <p>Kuvauspaikka: Namibin autiomaa, Namibia</p>
+                            <p>Kuvauspäivä: <time datetime="2025-07-24">24.7.2025</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:084_Sun_setting_in_the_Namib_desert_Photo_by_Giles_Laurent.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti sillat">
+                    <figure>
+                        <img src="./kuvat/brooklynin-silta-yolla.webp" width="900" height="600"
+                            alt="Brooklynin silta ja Manhattanin valaistuja rakennuksia yötaivasta vasten.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Brooklynin silta ja Manhattan yöllä</h2>
+
+                            <p>Brooklynin silta kulkee vinosti kuvan halki Manhattanin valaistujen rakennusten edessä.
+                                Sillan valot ja
+                                veden heijastukset erottuvat tummassa yömaisemassa.</p>
+                            <p>Tekijä: <a
+                                    href="https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_at_Night_with_Manhattan_Skyline.jpg"
+                                    target="_blank" rel="noopener noreferrer">Mikin24seven</a></p>
+                            <p>Kuvauspaikka: Brooklyn Bridge, New York, Yhdysvallat</p>
+                            <p>Kuvauspäivä: <time datetime="2014-12-27">27.12.2014</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_at_Night_with_Manhattan_Skyline.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti meri">
+                    <figure>
+                        <img src="./kuvat/second-beachin-kalliot.webp" width="900" height="600"
+                            alt="Meren muovaamia kalliopilareita ja aallot heijastavaa rantahiekkaa Second Beachilla.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Second Beach – Tyynenmeren rannikko</h2>
+
+                            <p>Second Beachin merestä kohoavat kalliopilarit erottuvat pilvistä taivasta vasten. Aallot
+                                ja
+                                märän
+                                rantahiekan heijastukset täyttävät kuvan etualan.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:King_of_Hearts" target="_blank"
+                                    rel="noopener noreferrer">King of Hearts</a></p>
+                            <p>Kuvauspaikka: Second Beach, Olympicin kansallispuisto, Washington, Yhdysvallat</p>
+                            <p>Kuvauspäivä: <time datetime="2018-06-09">9.6.2018</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Second_Beach_Olympic_June_2018_008.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/taal-tulivuori.webp" width="900" height="600"
+                            alt="Näkymä Tagaytaysta Taal-järvelle ja sen tulivuorisaarelle.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Taal-tulivuori</h2>
+
+                            <p>Tagaytaysta avautuu näkymä Taal-järvelle ja sen tulivuorisaarelle. Etualan vihreät
+                                rinteet ja
+                                kaukaiset
+                                vuoret kehystävät laajaa vesimaisemaa.</p>
+                            <p>Tekijä: <a
+                                    href="https://commons.wikimedia.org/wiki/File:Taal_Volcano_from_Tagaytay_(001)_2024-06-09.jpg"
+                                    target="_blank" rel="noopener noreferrer">LMP 2001</a></p>
+                            <p>Kuvauspaikka: Tagaytay, Filippiinit; näkymä Taal-tulivuorelle</p>
+                            <p>Kuvauspäivä: <time datetime="2024-06-09">9.6.2024</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Taal_Volcano_from_Tagaytay_(001)_2024-06-09.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti sillat">
+                    <figure>
+                        <img src="./kuvat/rialton-silta.webp" width="900" height="600"
+                            alt="Historiallinen kivisilta Canal Granden yli, ympärillään venetsialaista arkkitehtuuria.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Rialton silta Venetsiassa</h2>
+
+                            <p>Rialton kivisilta ylittää Canal Granden Venetsian rakennusten keskellä. Kanavalla näkyvät
+                                veneet ja
+                                vedenpinnan liike tuovat eloa historialliseen kaupunkimaisemaan.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Kallerna" target="_blank"
+                                    rel="noopener noreferrer">kallerna</a></p>
+                            <p>Kuvauspaikka: Venetsia, Italia</p>
+                            <p>Kuvauspäivä: <time datetime="2024-12-11">11.12.2024</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Ponte_di_Rialto_Venice_1.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti luonto">
+                    <figure>
+                        <img src="./kuvat/tad-hangin-vesiputoukset.webp" width="900" height="600"
+                            alt="Trooppinen jokimaisema Bolavenin ylängöllä.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Tad Hang -vesiputoukset</h2>
+
+                            <p>Tad Hangin vesiputoukset virtaavat kivisen jokiuoman yli Tad Lon kylän lähellä Laosissa.
+                                Trooppinen
+                                kasvillisuus ympäröi matalia putouksia ja niiden alapuolisia vesialtaita.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Basile_Morin" target="_blank"
+                                    rel="noopener noreferrer">Basile Morin</a></p>
+                            <p>Kuvauspaikka: Tad Lo, Bolavenin ylänkö, Salavanin maakunta, Laos</p>
+                            <p>Kuvauspäivä: <time datetime="2019-06-23">23.6.2019</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg"
+                                target="_blank" rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti auringonlaskut">
+                    <figure>
+                        <img src="./kuvat/masai-maran-savanni.webp" width="900" height="600"
+                            alt="Kultainen aurinko savannin, puiden ja eläinten yllä Masai Marassa.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Masai Maran savanni kultaisessa valossa</h2>
+
+                            <p>Matala aurinko valaisee Masai Maran savannia kullanvärisellä valolla. Puut, eläimet ja
+                                kaukaiset kukkulat
+                                erottuvat maiseman kerroksina.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/File:Masai_Mara_at_Sunset.jpg"
+                                    target="_blank" rel="noopener noreferrer">Danijel Mihajlovic</a></p>
+                            <p>Kuvauspaikka: Masai Mara, Kenia</p>
+                            <p>Kuvauspäivä: <time datetime="2020-09-15">15.9.2020</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Masai_Mara_at_Sunset.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p>Auringonlaskua koskeva kuvaus ja kuvausaika ovat ristiriidassa: kellonaika on klo 6.38.
+                                Vuorokaudenaikaa
+                                ei ole vahvistettu.</p>
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.
+                                    Alkuperäinen
+                                    julkaisu: <a
+                                        href="https://thenextcrossing.com/the-ultimate-guide-to-the-masai-mara-safari"
+                                        target="_blank" rel="noopener noreferrer">The Next Crossing</a>.</small></p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="kortti elaimet">
+                    <figure>
+                        <img src="./kuvat/gepardin-siluetti.webp" width="900" height="600"
+                            alt="Gepardin siluetti oranssia iltataivasta vasten.">
+
+                        <figcaption class="kuvan-tiedot">
+                            <h2>Gepardi auringonlaskussa</h2>
+
+                            <p>Gepardin tumma siluetti erottuu voimakkaan oranssia taivasta vasten Okavangon suistossa.
+                                Puut
+                                ja matala
+                                kumpare kehystävät sivulta näkyvää eläintä.</p>
+                            <p>Tekijä: <a href="https://commons.wikimedia.org/wiki/User:Arturo_de_Frias_Marques"
+                                    target="_blank" rel="noopener noreferrer">Arturo de Frias Marques</a></p>
+                            <p>Kuvauspaikka: Okavangon suisto, Botswana</p>
+                            <p>Kuvauspäivä: <time datetime="2009-03-02">2.3.2009</time></p>
+                            <a href="https://commons.wikimedia.org/wiki/File:Cheetah_at_Sunset.jpg" target="_blank"
+                                rel="noopener noreferrer">Alkuperäinen kuva – Wikimedia Commons</a>
+
+                            <p>Auringonlaskua koskeva kuvaus ja kuvausaika ovat ristiriidassa: kellonaika on klo 7.12.
+                                Vuorokaudenaikaa
+                                ei ole vahvistettu.</p>
+                            <p class="lisatiedot"><small>* <a href="https://creativecommons.org/licenses/by-sa/4.0"
+                                        target="_blank" rel="noopener noreferrer">CC BY-SA 4.0 – Nimeä-JaaSamoin 4.0
+                                        Kansainvälinen</a> · Rajattu 3:2,
+                                    pienennetty ja muunnettu WebP-muotoon. Galleriaversio samalla lisenssillä.</small>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <!-- <aside>
+
+        </aside> -->
+    </main>
+    <footer id="galleria-loppu" tabindex="-1">
+
+    </footer>
+</body>
+
+</html>
