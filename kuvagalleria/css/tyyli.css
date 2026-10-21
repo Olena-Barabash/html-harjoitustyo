@@ -1,3 +1,52 @@
+:root {
+    /* Värit */
+    --vari-paa: blue;
+    --vari-teksti: #222;
+    --vari-teksti-kaanteinen: white;
+    --vari-pinta: white;
+    --vari-reunus: #ddd;
+    --vari-varjo: #0002;
+    --vari-kohdistus: darkorchid;
+    --vari-kuvateksti-tausta: #fdfdfde6;
+    --vari-tietopainike-teksti: #83f0dc;
+    --vari-tietopainike-tausta: #23232696;
+    --vari-tietopainike-painettu-teksti: #a7f627;
+    --vari-tietopainike-painettu-tausta: #000000de;
+
+    /* Fontti */
+    --fontti: Arial, Helvetica, sans-serif;
+
+    --fonttikoko-base: 1rem;
+    --fonttikoko-md: 1.1rem;
+    --fonttikoko-lg: 1.4rem;
+    --fonttikoko-xl: 1.5rem;
+
+    --fonttipaino-puolilihava: 600;
+    --fonttipaino-vahva: 900;
+
+    /* Välit */
+    --tietopainikkeen-sisavali-pysty: 0.2rem;
+    --tietopainikkeen-sisavali-vaaka: 0.8rem;
+    
+    --vali-sm: 0.5rem;
+    --vali-md: 0.75rem;
+    --vali-lg: 1rem;
+    --vali-xl: 1.5rem;
+    --vali-2xl: 2rem;
+
+    /* Reunukset ja kohdistus */
+    --reunuksen-paksuus: 1px;
+    --kohdistuksen-paksuus: 3px;
+    --kohdistuksen-etaisyys-sm: 2px;
+    --kohdistuksen-etaisyys-md: 3px;
+    --pyoristys: 1rem;
+
+    /* Kuvateksti */
+    --kuvatekstin-sisavali: 1.2rem;
+    --kuvatekstin-pystysiirto: 3.4rem;
+    --kuvatekstin-enimmaisleveys: 30rem;
+}
+
 @layer reset, base, layout, components;
 
 @layer reset {
@@ -7,14 +56,14 @@
 
     body {
         margin: 0;
-        padding: 1rem 2rem;
+        padding: var(--vali-lg) var(--vali-2xl);
     }
 }
 
 @layer base {
     body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
+        font-family: var(--fontti);
+        font-size: var(--fonttikoko-base);
     }
 
     .paanavigaatio ul, .suodattimet {
@@ -24,17 +73,21 @@
 }
 
 @layer layout {
+    .ohje-lisaa {
+        display: none;
+    }
+
     .suodatin-kontti {
         container-type: inline-size;
         position: relative;
-        border: none;
-        padding: 1rem 0;
-        margin-top: 2rem;
+        border: 0;
+        padding: var(--vali-lg) 0;
+        margin-top: var(--vali-2xl);
     }
 
      .suodatin-painike {
         display: block;
-        margin: 1rem 0;
+        margin: var(--vali-lg) 0;
         anchor-name: --suodatin;
     }
 
@@ -48,25 +101,32 @@
 
         width: anchor-size(width);
         margin: 0;
-        padding: 0.5rem 0;
+        padding: var(--vali-sm) 0;
 
-        border: 1px solid #ddd;
-        background: white;
-        box-shadow: 0 4px 12px #0002;
+        border: var(--reunuksen-paksuus) solid var(--vari-reunus);
+        background: var(--vari-pinta);
+        box-shadow: 0 4px 12px var(--vari-varjo);
 
-        font-weight: 600;
+        font-weight: var(--fonttipaino-puolilihava);
     }
 
     .kuvat-kontti {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, clamp(15rem, 23vw, 25rem)), 1fr));
-        gap: 1rem;
+        gap: var(--vali-lg);
     }
 
     @container (min-width: 920px) {
-        h1, .ohje, .kuvat-kontti {
-            /* Jotta se olisi samalla tasolla suodattimen kanssa, jossa on tällainen väli, jotta outline näkyisi :focus-visible-tilassa. */
-            margin-left: 5px; 
+        h1 {
+            margin-left: calc(var(--kohdistuksen-paksuus) + var(--kohdistuksen-etaisyys-md));
+        }
+
+        .ohje, .kuvat-kontti {
+            margin-left: calc(var(--kohdistuksen-paksuus) + var(--kohdistuksen-etaisyys-sm));
+        }
+
+        .ohje-lisaa {
+            display: inline;
         }
 
         .suodatin-painike {
@@ -77,15 +137,13 @@
             display: flex;
             position: static;
             width: 100%;
-            gap: 1.5rem;
-            padding: 0;
-            margin: 0.5rem 0;
-            padding: 8px 5px;
+            gap: var(--vali-xl);
+            margin: var(--vali-sm) 0;
+            padding: var(--vali-lg) var(--vali-sm);
             border: 0;
             box-shadow: none;
         }
     }
-
 }
 
 @layer components {
@@ -96,53 +154,49 @@
     .galleria-kontti:has(input[value="meri"]:checked) .kortti:not(.meri) { display: none; }
     .galleria-kontti:has(input[value="elaimet"]:checked) .kortti:not(.elaimet) { display: none; }
 
-    .ohje {
-        display: none;
-    }
-
     .suodatin-painike {
         position: relative;
         width: 12.5rem;
         height: 3rem;
-        padding: 0.75rem 1rem;
+        padding: var(--vali-md) var(--vali-lg);
         text-align: left;
         cursor: pointer;
-        background: blue;
-        border: 1px solid blue;
-        border-radius: 0.8rem;
-        font-size: 1.1rem;
-        color: white;
-        font-weight: 600;
+        background: var(--vari-paa);
+        border: var(--reunuksen-paksuus) solid var(--vari-paa);
+        border-radius: var(--pyoristys);
+        font-size: var(--fonttikoko-md);
+        color: var(--vari-teksti-kaanteinen);
+        font-weight: var(--fonttipaino-puolilihava);
     }
 
     .suodatin-painike::after {
         position: absolute;
-        right: 1rem;
+        right: var(--vali-lg);
         top: 20%;
         content: "↓";
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: var(--fonttikoko-xl);
+        font-weight: var(--fonttipaino-vahva);
     }
 
     .suodatin {
         display: block;
         position: relative;
-        padding: 0.75rem 1rem;
+        padding: var(--vali-md) var(--vali-lg);
         cursor: pointer;
     }
 
     .suodattimet input {
         position: absolute;
         opacity: 0;
-        width: 1px;
-        height: 1px;
+        width: var(--reunuksen-paksuus);
+        height: var(--reunuksen-paksuus);
     }
 
     .suodatin:has(input:focus-visible),
     .suodatin-painike:focus-visible,
     a:focus-visible {
-        outline: 3px solid darkorchid;
-        outline-offset: 2px;
+        outline: var(--kohdistuksen-paksuus) solid var(--vari-kohdistus);
+        outline-offset: var(--kohdistuksen-etaisyys-sm);
     }
 
     .kortti {
@@ -150,7 +204,7 @@
         min-width: 0;
     }
 
-    .kortti figure {        
+    .kortti figure {
         margin: 0;
         min-width: 0;
     }
@@ -161,22 +215,22 @@
         height: auto;
         aspect-ratio: 3 / 2;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: var(--pyoristys);
     }
 
-    .tiedot-painike:has(.kuvan-tiedot:popover-open) {
+    .kortti:has(.kuvan-tiedot:popover-open) .tiedot-painike {
         opacity: 1;
     }
    
     .kuvan-tiedot {
         display: none;
         width: auto;
-        margin: .5rem 0 0;
-        padding: 1.2rem;
+        margin: var(--vali-sm) 0 0;
+        padding: var(--kuvatekstin-sisavali);
         border: 0;
-        border-radius: 1rem;
-        background: #fdfdfde6;
-        color: #222;
+        border-radius: var(--pyoristys);
+        background: var(--vari-kuvateksti-tausta);
+        color: var(--vari-teksti);
         overflow: visible;
         overflow-wrap: anywhere;
         z-index: 5;
@@ -187,49 +241,44 @@
         position: fixed;
         inset: 0;
         margin: auto;
-        width: min(90vw, 30rem);
+        width: min(90vw, var(--kuvatekstin-enimmaisleveys));
         height: fit-content;
         min-width: 0;
         min-height: 0;
-        max-width: calc(100vw - 2rem);
+        max-width: calc(100vw - var(--vali-2xl));
         max-height: 80vh;
-        padding: 1.2rem;
-        border: 0;
-        border-radius: 1rem;
-        background: #fdfdfde6;
-        color: #222;        
     }
 
     .tiedot-painike {
         display: block;
-        border: none;
+        border: 0;
         border-radius: 50%;
         position: absolute;
         top: 5%;
         right: 5%;
-        font-size: 1.4rem;
-        color: #83f0dc;
-        background-color: rgb(35 35 38 / 59%);
+        font-size: var(--fonttikoko-lg);
+        color: var(--vari-tietopainike-teksti);
+        background-color: var(--vari-tietopainike-tausta);
         cursor: pointer;
-        padding: 0.2rem 0.8rem;
+        padding: var(--tietopainikkeen-sisavali-pysty) var(--tietopainikkeen-sisavali-vaaka);
         opacity: 0;
     }
 
     .tiedot-painike:focus-visible {
         opacity: 1;
-        outline: 3px solid darkorchid;
-        outline-offset: 3px;
+        outline: var(--kohdistuksen-paksuus) solid var(--vari-kohdistus);
+        outline-offset: var(--kohdistuksen-etaisyys-md);
     }
 
     .tiedot-painike:active {
-        background-color: #000000de;
-        color: #a7f627;
+        background-color: var(--vari-tietopainike-painettu-tausta);
+        color: var(--vari-tietopainike-painettu-teksti);
     }
 
     @media (hover: hover) and (pointer: fine) {
         .suodatin:hover {
-            color: white;
-            background: blue;
+            color: var(--vari-teksti-kaanteinen);
+            background: var(--vari-paa);
         }
 
         .kortti:hover  .tiedot-painike {
@@ -244,7 +293,7 @@
         .kuvan-tiedot::before {
             content: "";
             position: absolute;
-            inset: -1rem;
+            inset: calc(-1 * var(--vali-lg));
             z-index: -1;
         }
     }
@@ -300,40 +349,36 @@
             .kortti .kuvan-tiedot {
                 position-anchor: var(--anchor-name, none);
                 inset: auto;
-                top: calc(anchor(top, 1rem) + 3.4rem);
+                top: calc(anchor(top, var(--vali-lg)) + var(--kuvatekstin-pystysiirto));
                 left: auto;
-                right: calc(anchor(right, 1rem) + 1.5rem);
+                right: calc(anchor(right, var(--vali-lg)) + var(--vali-xl));
                 bottom: auto;
                 margin: 0;
-                width: calc(anchor-size(width, 30rem) * 0.8);
+                width: calc(anchor-size(width, var(--kuvatekstin-enimmaisleveys)) * 0.8);
                 position-try-fallbacks: none;
             }
         }
 
     @container (min-width: 920px) {
-        .ohje {
-            display: block;
-        }
-
         .ohita-galleria:visited {
             color: initial;
         }
 
         .suodatin {
-            padding: 1rem;
+            padding: var(--vali-lg);
         }
 
         .suodatin:has(input:checked) {
-            color: white;
-            background: blue;
-            border: 1px solid blue;
-            border-radius: 0.8rem;
+            color: var(--vari-teksti-kaanteinen);
+            background: var(--vari-paa);
+            border: var(--reunuksen-paksuus) solid var(--vari-paa);
+            border-radius: var(--pyoristys);
         }
 
         @media (hover: hover) and (pointer: fine) {
             .suodatin:hover {
                 color: inherit;
-                background: white;
+                background: var(--vari-pinta);
             }
         }
     }
