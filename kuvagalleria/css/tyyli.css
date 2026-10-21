@@ -24,13 +24,6 @@
 }
 
 @layer layout {
-    /* .galleria-kontti {
-        container-type: inline-size;
-    } */
-
-
-    
-
     .suodatin-kontti {
         container-type: inline-size;
     }
@@ -46,10 +39,6 @@
     }
 
     .suodattimet {
-        /* display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid #ddd; */
-
         position: absolute;
         position-anchor: --suodatin;
 
@@ -66,20 +55,13 @@
         box-shadow: 0 4px 12px #0002;
 
         font-weight: 600;
-        /* justify-content: space-between; */
     }
 
     .kuvat-kontti {
-        /* position: relative; */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, clamp(15rem, 23vw, 25rem)), 1fr));
         gap: 1rem;
     }
-
-    /* @media (min-width: 800px) {
-        
-        
-    } */
 
     @container (min-width: 920px) {
         h1, .ohje, .kuvat-kontti {
@@ -94,17 +76,13 @@
         .suodattimet {
             display: flex;
             position: static;
-            /* flex-direction: row; */
             width: 100%;
             gap: 1.5rem;
             padding: 0;
             margin: 0.5rem 0;
             padding: 8px 5px;
             border: 0;
-            /* border-bottom: 1px solid #ddd; */
             box-shadow: none;
-            /* font-weight: 600; */
-            /* justify-content: space-between; */
         }
     }
 
@@ -146,14 +124,12 @@
         font-weight: 900;
     }
 
-
     .suodatin {
         display: block;
         position: relative;
         padding: 0.75rem 1rem;
         cursor: pointer;
     }
-
 
     .suodattimet input {
         position: absolute;
@@ -162,28 +138,16 @@
         height: 1px;
     }
 
-     /* .suodatin:has(input:checked) {
-        color: white;
-        background: blue;
-        border-radius: 0.8rem;
-    } */
-
     .suodatin:has(input:focus-visible),
     .suodatin-painike:focus-visible,
     a:focus-visible {
         outline: 3px solid darkorchid;
         outline-offset: 2px;
     }
-    
-    /* .suodatin:active {
-
-    } */
 
     .kortti {
         position: relative;
         min-width: 0;
-        /* border-radius: 1rem; */
-        /* overflow: hidden; */
     }
 
     .kortti figure {        
@@ -203,12 +167,9 @@
     .tiedot-painike:has(.kuvan-tiedot:popover-open) {
         opacity: 1;
     }
-    
- 
    
     .kuvan-tiedot {
         display: none;
-        /* position: static; */
         width: auto;
         margin: .5rem 0 0;
         padding: 1.2rem;
@@ -232,38 +193,26 @@
         min-height: 0;
         max-width: calc(100vw - 2rem);
         max-height: 80vh;
-        /* overflow: auto; */
         padding: 1.2rem;
         border: 0;
         border-radius: 1rem;
         background: #fdfdfde6;
-        color: #222;
-        
+        color: #222;        
     }
 
-
     .tiedot-painike {
-        /* display: none; */
-            display: block;
-            border: none;
-            /* width: 2rem; */
-            /* text-align: center; */
-            /* height: 2rem; */
-            border-radius: 50%;
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            font-size: 1.4rem;
-            /* background-color: rgb(118 245 255 / 85%); */
-            /* color: #eaeef4; */
-            /* text-shadow: 1px 1px 3px black, -1px -1px 2px black; */
-            /* color: black; */
-            color: #83f0dc;
-            background-color: rgb(35 35 38 / 59%);
-            cursor: pointer;
-            padding: 0.2rem 0.8rem;
-            opacity: 0;
-            /* z-index: 10; */
+        display: block;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-size: 1.4rem;
+        color: #83f0dc;
+        background-color: rgb(35 35 38 / 59%);
+        cursor: pointer;
+        padding: 0.2rem 0.8rem;
+        opacity: 0;
     }
 
     .tiedot-painike:focus-visible {
@@ -277,97 +226,27 @@
         color: #a7f627;
     }
 
-    /* .kortti:has(.tiedot-painike:popover-open) {
-        .kuvan-tiedot:popover-open {
-            display: block;
-        }        
-    } */
-
     @media (hover: hover) and (pointer: fine) {
         .suodatin:hover {
             color: white;
             background: blue;
         }
 
-        /* .kortti:has(> .tiedot-painike:hover) .kuvan-tiedot[popover], */
-            /* .kortti .kuvan-tiedot[popover]:hover, */
-            /* .kortti .kuvan-tiedot[popover]:focus-within { display: block; } */
-
         .kortti:hover  .tiedot-painike {
             opacity: 1;
         }
 
-        /* .kuvan-tiedot {
-            display: none;
-            position: absolute;
-            border: none;
-            
-            top: 18%;
-            left: 15%;
-            width: 80%;
-            background: #fdfdfde6;
-            z-index: 10;
-            padding: 1.2rem;
-            border-radius: 1rem;
-            margin-top: 0.5rem;
-        } */
-
-
-
         .kortti:has(.tiedot-painike:hover) .kuvan-tiedot,
         .kortti:has(.kuvan-tiedot:hover) .kuvan-tiedot {
-
-
-                display: block;
- 
+                display: block; 
         }
 
-        /* .kortti:has(.tiedot-painike:hover, .kuvan-tiedot:hover) {
-            .kuvan-tiedot {
-
-                display: block;
- 
-    } */
-
-    .kuvan-tiedot::before {
-                content: "";
-                position: absolute;
-                inset: -1rem;
-                z-index: -1;
-            }
-
-   
-
-
-    
-    /* @supports (top: anchor(bottom)) {
-    .kuvan-tiedot {
-        position: absolute;
-        border: none;
-        inset: auto;
-        margin: 0;
-        background: #fdfdfde6;
-        top: calc(anchor(bottom) + 0.25rem);
-        right: calc(anchor(right) - 3rem);
-        width: calc(anchor-size(width) * 10);
-        max-width: calc(80vw - 4rem);
-        position-try-fallbacks: flip-inline, flip-block;
-    }
-            } */
-
-  
-
-            /* .kuvan-tiedot::before {
-                content: "";
-                position: absolute;
-                inset: -0.5rem;
-                z-index: -1;
-            } */
-        
-
-        /* .kuvan-tiedot:not(:hover) {
-            display: none;
-        } */
+        .kuvan-tiedot::before {
+            content: "";
+            position: absolute;
+            inset: -1rem;
+            z-index: -1;
+        }
     }
 
     @supports (anchor-name: --test) and (position-anchor: --test) and (top: anchor(top)) and (width: anchor-size(width)) {
@@ -426,7 +305,7 @@
                 right: calc(anchor(right, 1rem) + 1.5rem);
                 bottom: auto;
                 margin: 0;
-                width: calc(anchor-size(width, 30rem) * .8);
+                width: calc(anchor-size(width, 30rem) * 0.8);
                 position-try-fallbacks: none;
             }
         }
@@ -458,5 +337,4 @@
             }
         }
     }
-
 }
