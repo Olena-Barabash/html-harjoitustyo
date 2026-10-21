@@ -360,7 +360,7 @@
         }
 
     @container (min-width: 920px) {
-        .ohita-galleria:visited {
+        .ohita-galleria, .ohita-galleria:visited {
             color: initial;
         }
 
