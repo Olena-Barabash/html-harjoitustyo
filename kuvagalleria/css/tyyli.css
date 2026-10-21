@@ -26,10 +26,10 @@
 @layer layout {
     .suodatin-kontti {
         container-type: inline-size;
-    }
-
-    .suodatin-kontti {
         position: relative;
+        border: none;
+        padding: 1rem 0;
+        margin-top: 2rem;
     }
 
      .suodatin-painike {

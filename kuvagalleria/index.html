@@ -14,17 +14,19 @@
         <section class="galleria-kontti">
             <h1>Luontogalleria</h1>
 
-            <div class="suodatin-kontti">
-                <p class="ohje">
+            <!-- <div class="suodatin-kontti"> -->
+
+
+            <fieldset class="suodatin-kontti">
+                <legend class="ohje">
                     * Näppäimistönavigointi: käytä nuolinäppäimiä ← ja → vaihtaaksesi suodatinta, kun kohdistus on
                     suodattimissa. Voit myös <a href="#galleria-loppu" class="ohita-galleria">
                         <em>ohittaa kuvagallerian</em></a>.
-                </p>
+                </legend>
                 <button type="button" class="suodatin-painike" popovertarget="suodatinlista"
                     aria-label="Valitse kuvakategoria">
                     Kaikki
                 </button>
-
                 <ul class="suodattimet" id="suodatinlista" popover>
                     <li>
                         <label class="suodatin">
@@ -69,7 +71,9 @@
                         </label>
                     </li>
                 </ul>
-            </div>
+            </fieldset>
+
+            <!-- </div> -->
 
             <div class="kuvat-kontti">
                 <article class="kortti elaimet">
@@ -467,7 +471,7 @@
                 <article class="kortti kaupungit">
                     <figure>
                         <img src="./kuvat/amsterdamin-kanavatalot.webp" width="900" height="600"
-                            alt="Damrakin kanavatalot ja niiden heijastukset tummien pilvien alla. Taustalla näkyy Oude Kerk -kirkon torni.">
+                            alt="Damrakin kanavatalot heijastuvat veteen tummien pilvien alla, taustalla Oude Kerkin torni.">
 
                         <figcaption id="kuva-14" class="kuvan-tiedot" popover>
                             <h2>Amsterdamin värikkäät kanavatalot</h2>
