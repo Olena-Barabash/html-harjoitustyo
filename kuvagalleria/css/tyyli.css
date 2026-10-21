@@ -111,29 +111,12 @@
 }
 
 @layer components {
-    .galleria-kontti:has(input[value="luonto"]:checked) .kortti:not(.luonto) {
-        display: none;
-    }
-
-    .galleria-kontti:has(input[value="kaupungit"]:checked) .kortti:not(.kaupungit) {
-        display: none;
-    }
-
-    .galleria-kontti:has(input[value="sillat"]:checked) .kortti:not(.sillat) {
-        display: none;
-    }
-
-    .galleria-kontti:has(input[value="auringonlaskut"]:checked) .kortti:not(.auringonlaskut) {
-        display: none;
-    }
-
-    .galleria-kontti:has(input[value="meri"]:checked) .kortti:not(.meri) {
-        display: none;
-    }
-
-    .galleria-kontti:has(input[value="elaimet"]:checked) .kortti:not(.elaimet) {
-        display: none;
-    }
+    .galleria-kontti:has(input[value="luonto"]:checked) .kortti:not(.luonto) { display: none; }
+    .galleria-kontti:has(input[value="kaupungit"]:checked) .kortti:not(.kaupungit) { display: none; }
+    .galleria-kontti:has(input[value="sillat"]:checked) .kortti:not(.sillat) { display: none; }
+    .galleria-kontti:has(input[value="auringonlaskut"]:checked) .kortti:not(.auringonlaskut) { display: none; }
+    .galleria-kontti:has(input[value="meri"]:checked) .kortti:not(.meri) { display: none; }
+    .galleria-kontti:has(input[value="elaimet"]:checked) .kortti:not(.elaimet) { display: none; }
 
     .ohje {
         display: none;
@@ -217,18 +200,47 @@
         border-radius: 1rem;
     }
 
+    .tiedot-painike:has(.kuvan-tiedot:popover-open) {
+        opacity: 1;
+    }
+    
+ 
+   
     .kuvan-tiedot {
         display: none;
-        /* display: block; */
-        position: absolute;
-        left: 15%;
-        top: 18%;
-        background: #fdfdfddb;
-        z-index: 10;
+        /* position: static; */
+        width: auto;
+        margin: .5rem 0 0;
         padding: 1.2rem;
-        width: 80%;
+        border: 0;
         border-radius: 1rem;
+        background: #fdfdfde6;
+        color: #222;
+        overflow: visible;
+        overflow-wrap: anywhere;
+        z-index: 5;
     }
+
+    .kuvan-tiedot:popover-open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        width: min(90vw, 30rem);
+        height: fit-content;
+        min-width: 0;
+        min-height: 0;
+        max-width: calc(100vw - 2rem);
+        max-height: 80vh;
+        /* overflow: auto; */
+        padding: 1.2rem;
+        border: 0;
+        border-radius: 1rem;
+        background: #fdfdfde6;
+        color: #222;
+        
+    }
+
 
     .tiedot-painike {
         /* display: none; */
@@ -251,6 +263,7 @@
             cursor: pointer;
             padding: 0.2rem 0.8rem;
             opacity: 0;
+            /* z-index: 10; */
     }
 
     .tiedot-painike:focus-visible {
@@ -259,19 +272,16 @@
         outline-offset: 3px;
     }
 
-    /* .kortti:has(.tiedot-painike:popover-open) { */
+    .tiedot-painike:active {
+        background-color: #000000de;
+        color: #a7f627;
+    }
+
+    /* .kortti:has(.tiedot-painike:popover-open) {
         .kuvan-tiedot:popover-open {
             display: block;
-            position: absolute;
-                left: 15%;
-                top: 18%;
-                background: #fdfdfddb;
-                z-index: 10;
-                padding: 1.2rem;
-                width: 80%;
-                border-radius: 1rem;
         }        
-    /* } */
+    } */
 
     @media (hover: hover) and (pointer: fine) {
         .suodatin:hover {
@@ -279,85 +289,159 @@
             background: blue;
         }
 
-        .kortti:hover {
-            .tiedot-painike {
-                /* display: block;
-                border: none;
-                width: 2rem;
-                height: 2rem;
-                border-radius: 50%;
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                font-size: 1.4rem;
-                background-color: rgb(118 245 255 / 85%);
-                color: black;
-                color: #83f0dc;
-                background-color: rgb(35 35 38 / 59%);
-                cursor: pointer; */
-                display: block;
-                border: none;
-                opacity: 1;
-                /* width: 2rem; */
-                /* text-align: center; */
-                /* height: 2rem; */
-                border-radius: 50%;
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                font-size: 1.4rem;
-                /* background-color: rgb(118 245 255 / 85%); */
-                /* color: #eaeef4; */
-                /* text-shadow: 1px 1px 3px black, -1px -1px 2px black; */
-                /* color: black; */
-                color: #83f0dc;
-                background-color: rgb(35 35 38 / 59%);
-                cursor: pointer;
-                padding: 0.2rem 0.8rem;
-            }
+        /* .kortti:has(> .tiedot-painike:hover) .kuvan-tiedot[popover], */
+            /* .kortti .kuvan-tiedot[popover]:hover, */
+            /* .kortti .kuvan-tiedot[popover]:focus-within { display: block; } */
+
+        .kortti:hover  .tiedot-painike {
+            opacity: 1;
         }
 
-        .kortti:has(.tiedot-painike:hover, .kuvan-tiedot:hover) {
-            .kuvan-tiedot {
-                /* display: block;
-                position: absolute;
-                left: 20%;
-                top: 25%;
-                background: #fdfdfddb;
-                z-index: 10;
-                padding: 1.2rem; */
-                display: block;
-                position: absolute;
-                left: 15%;
-                top: 18%;
-                background: #fdfdfddb;
-                z-index: 10;
-                padding: 1.2rem;
-                width: 80%;
-                border-radius: 1rem;
-                /* margin-top: 1.2rem; */
-            }
+        /* .kuvan-tiedot {
+            display: none;
+            position: absolute;
+            border: none;
+            
+            top: 18%;
+            left: 15%;
+            width: 80%;
+            background: #fdfdfde6;
+            z-index: 10;
+            padding: 1.2rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
+        } */
 
-            .kuvan-tiedot::before {
+
+
+        .kortti:has(.tiedot-painike:hover) .kuvan-tiedot,
+        .kortti:has(.kuvan-tiedot:hover) .kuvan-tiedot {
+
+
+                display: block;
+ 
+        }
+
+        /* .kortti:has(.tiedot-painike:hover, .kuvan-tiedot:hover) {
+            .kuvan-tiedot {
+
+                display: block;
+ 
+    } */
+
+    .kuvan-tiedot::before {
                 content: "";
                 position: absolute;
-                inset: -1.5rem;
+                inset: -1rem;
                 z-index: -1;
             }
-        }
+
+   
+
+
+    
+    /* @supports (top: anchor(bottom)) {
+    .kuvan-tiedot {
+        position: absolute;
+        border: none;
+        inset: auto;
+        margin: 0;
+        background: #fdfdfde6;
+        top: calc(anchor(bottom) + 0.25rem);
+        right: calc(anchor(right) - 3rem);
+        width: calc(anchor-size(width) * 10);
+        max-width: calc(80vw - 4rem);
+        position-try-fallbacks: flip-inline, flip-block;
+    }
+            } */
+
+  
+
+            /* .kuvan-tiedot::before {
+                content: "";
+                position: absolute;
+                inset: -0.5rem;
+                z-index: -1;
+            } */
+        
 
         /* .kuvan-tiedot:not(:hover) {
             display: none;
         } */
     }
 
+    @supports (anchor-name: --test) and (position-anchor: --test) and (top: anchor(top)) and (width: anchor-size(width)) {
+            .kortti:has(#kuva-1) { --anchor-name: --kuva-1; }
+            .kortti:has(#kuva-2) { --anchor-name: --kuva-2; }
+            .kortti:has(#kuva-3) { --anchor-name: --kuva-3; }
+            .kortti:has(#kuva-4) { --anchor-name: --kuva-4; }
+            .kortti:has(#kuva-5) { --anchor-name: --kuva-5; }
+            .kortti:has(#kuva-6) { --anchor-name: --kuva-6; }
+            .kortti:has(#kuva-7) { --anchor-name: --kuva-7; }
+            .kortti:has(#kuva-8) { --anchor-name: --kuva-8; }
+            .kortti:has(#kuva-9) { --anchor-name: --kuva-9; }
+            .kortti:has(#kuva-10) { --anchor-name: --kuva-10; }
+            .kortti:has(#kuva-11) { --anchor-name: --kuva-11; }
+            .kortti:has(#kuva-12) { --anchor-name: --kuva-12; }
+            .kortti:has(#kuva-13) { --anchor-name: --kuva-13; }
+            .kortti:has(#kuva-14) { --anchor-name: --kuva-14; }
+            .kortti:has(#kuva-15) { --anchor-name: --kuva-15; }
+            .kortti:has(#kuva-16) { --anchor-name: --kuva-16; }
+            .kortti:has(#kuva-17) { --anchor-name: --kuva-17; }
+            .kortti:has(#kuva-18) { --anchor-name: --kuva-18; }
+            .kortti:has(#kuva-19) { --anchor-name: --kuva-19; }
+            .kortti:has(#kuva-20) { --anchor-name: --kuva-20; }
+            .kortti:has(#kuva-21) { --anchor-name: --kuva-21; }
+            .kortti:has(#kuva-22) { --anchor-name: --kuva-22; }
+            .kortti:has(#kuva-23) { --anchor-name: --kuva-23; }
+            .kortti:has(#kuva-24) { --anchor-name: --kuva-24; }
+            .kortti:has(#kuva-25) { --anchor-name: --kuva-25; }
+            .kortti:has(#kuva-26) { --anchor-name: --kuva-26; }
+            .kortti:has(#kuva-27) { --anchor-name: --kuva-27; }
+            .kortti:has(#kuva-28) { --anchor-name: --kuva-28; }
+            .kortti:has(#kuva-29) { --anchor-name: --kuva-29; }
+            .kortti:has(#kuva-30) { --anchor-name: --kuva-30; }
+            .kortti:has(#kuva-31) { --anchor-name: --kuva-31; }
+            .kortti:has(#kuva-32) { --anchor-name: --kuva-32; }
+            .kortti:has(#kuva-33) { --anchor-name: --kuva-33; }
+            .kortti:has(#kuva-34) { --anchor-name: --kuva-34; }
+            .kortti:has(#kuva-35) { --anchor-name: --kuva-35; }
+            .kortti:has(#kuva-36) { --anchor-name: --kuva-36; }
+            .kortti:has(#kuva-37) { --anchor-name: --kuva-37; }
+            .kortti:has(#kuva-38) { --anchor-name: --kuva-38; }
+            .kortti:has(#kuva-39) { --anchor-name: --kuva-39; }
+            .kortti:has(#kuva-40) { --anchor-name: --kuva-40; }
+            .kortti:has(#kuva-41) { --anchor-name: --kuva-41; }
+            .kortti:has(#kuva-42) { --anchor-name: --kuva-42; }
+
+            .kortti {
+                anchor-name: var(--anchor-name, none);
+            }
+
+            .kortti .kuvan-tiedot {
+                position-anchor: var(--anchor-name, none);
+                inset: auto;
+                top: calc(anchor(top, 1rem) + 3.4rem);
+                left: auto;
+                right: calc(anchor(right, 1rem) + 1.5rem);
+                bottom: auto;
+                margin: 0;
+                width: calc(anchor-size(width, 30rem) * .8);
+                position-try-fallbacks: none;
+            }
+        }
+
     @container (min-width: 920px) {
         .ohje {
             display: block;
         }
+
+        .ohita-galleria:visited {
+            color: initial;
+        }
+
         .suodatin {
             padding: 1rem;
-            /* font-size: 1rem; */
         }
 
         .suodatin:has(input:checked) {
